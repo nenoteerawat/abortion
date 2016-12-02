@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+	{
+		/*font-family:Arial, Helvetica, sans-serif;*/
+		font-size:15px;
+		
+	}
+
+.table_main
+	{
+		width:1000px;
+		margin:0 auto; /*จัดให้อยู่ตรงกลาง (แต่ต้องบอกขนาดก่อน)*/ 
+		margin-top:10px;
+		vertical-align:top;
+	
+	}
+.menu_center
+	{
+		text-align:center;
+	}
+.menu_right
+	{
+		text-align:right;
+	}
+.menu_left
+	{
+		text-align:left;
+	}
+
+img
+	{
+		border:none;
+	}
+.broder_set
+	{
+		border-width:1px;
+		border-style:solid;
+		border-color:#A6C9E2;
+		border-radius: .625em; /*กำหนดความโค้ง จะเป็น px ก็ได้นะ*/
+		-moz-border-radius: .625em; /*สำหรับ firefox*/
+		-webkit-border-radius: .625em; /*สำหรับ browser อื่นๆ*/
+		margin:0 auto 0 auto; /*สำหรับ ทำให้อยู่ตรงกลาง*/
+		
+	}
+
+.link_manu
+	{
+				
+				font-size:16px;
+				
+	}
+.link_manu a:link {
+	color:#00F;
+	text-decoration: none;
+}
+.link_manu a:visited {
+	text-decoration: none;
+	color:#00F;
+}
+.link_manu a:hover {
+	text-decoration: none;
+	color: #999;
+}
+.link_manu a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+.block_show
+	{
+		font-size:14px;
+		line-height:2em;
+	}
+	
+.shadow
+{
+	 box-shadow: 0 0 5px #000000;
+	-moz-box-shadow: 0 0 5px #000000;
+	-webkit-box-shadow: 0 0 5px #000000;
+	padding:10px;
+	margin:10px 5px 10px 5px; 
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.font_table
+	{
+		/*font-family:Arial, Helvetica, sans-serif;*/
+		font-size:17px;
+		
+	}
+.label_h
+	{
+		font-weight:bold;
+	}
+.divright
+{
+float:right;
+}
+ 
+.divleft
+{
+float:left;
+}
+.color_text
+	{
+		text-align:center;
+		font-weight:bold;
+		color:#FFF;
+	}
+input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(1.5);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.5);
+}
+input[type=radio] {
+  /* All browsers except webkit*/
+  transform: scale(1.5);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.5);
+}
