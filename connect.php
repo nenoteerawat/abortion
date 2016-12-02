@@ -6,7 +6,7 @@
 	$dbname = "abortionsurvey";*/
 	
 	$username = "root";
-	$password = "";
+	$password = "anamai#rh29";
 	$dbname = "abortion";
 	
 	$link = mysql_connect($host,$username,$password) or die ("Cannot connect mysql");
