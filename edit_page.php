@@ -609,12 +609,12 @@ echo $check_abortion."<br>";
 
 	});
 //-------------------- select ID -----------------------
-function chkLenId(){
-	var id_len = document.getElementById("file_id").value.length;
-	if(0 < id_len && id_len < 3){
-		alert("กรุณาใส่หมายเลขแบบสอบถาม 3 หลัก");
-		document.getElementById("survey_datefirst").value="";
+function toId(){
+	var id = document.getElementById("file_id").value;
+	for(var i = id.length; i < 4; i++){
+		id  = "0"+id;
 	}
+	return id;
 }
 function clearDate(){
 	$.post("check_id.php",
@@ -622,7 +622,7 @@ function clearDate(){
 			$("#h_check_id").val(data);
 
 			var h = document.form1.hospital_id.value;
-			var fid = document.getElementById("file_id").value; 
+			var fid = toId(document.getElementById("file_id").value); 
 			var h_check_id=document.getElementById("h_check_id").value;
 			//var h_check_id = document.form1.h_check_id.value;
 			  
@@ -643,43 +643,37 @@ function clearDate(){
 		}
 	);
 }
-function check_id(year){ 
-	var id_len = document.getElementById("file_id").value.length;
-	if(0 < id_len && id_len < 3){
-		alert("กรุณาใส่หมายเลขแบบสอบถาม 3 หลัก");
-		document.getElementById("survey_datefirst").value="";
-	}else{
-		$.post("check_id.php",
-			function(data){
-				$("#h_check_id").val(data);
-
-				var h = document.form1.hospital_id.value;
-				var fid = document.getElementById("file_id").value; 
-				var h_check_id=document.getElementById("h_check_id").value;
-				//var h_check_id = document.form1.h_check_id.value;
-				  
-				var text = h+'-'+fid;
-				
-			//----------------------------------------------------- เช็คค่าซ้ำ Array ------------------------------------	
-				var array_h_check_id = h_check_id.split(",");
-				var old_id = document.getElementById("h_id_edit").value;
-				var old_year = document.getElementById("h_year_edit").value;
-				  for (var i = 0; i < array_h_check_id.length; i++)
-				  { 
-					var temp = array_h_check_id[i].split(":");
-					var id_chk = temp[0];
-					var year_chk = temp[1];
-					if (id_chk == text && year == year_chk && !(text == old_id && year == old_year))
-					{
-						alert("รหัสนี้ถูกบันทึกในปี "+(year+543)+" เรียบร้อยแล้ว");
-						document.getElementById("survey_datefirst").value="";
-						document.getElementById("survey_datefirst").focus();
-						return true ;
-					}
-				  }
-			}
-		);
-	}
+function check_id(year){ 	
+	$.post("check_id.php",
+		function(data){
+			$("#h_check_id").val(data);
+			var h = document.form1.hospital_id.value;
+			var fid = toId(document.getElementById("file_id").value);
+			document.getElementById("file_id").value = fid;
+			var h_check_id=document.getElementById("h_check_id").value;
+			//var h_check_id = document.form1.h_check_id.value;
+			  
+			var text = h+'-'+fid;
+			
+		//----------------------------------------------------- เช็คค่าซ้ำ Array ------------------------------------	
+			var array_h_check_id = h_check_id.split(",");
+			var old_id = document.getElementById("h_id_edit").value;
+			var old_year = document.getElementById("h_year_edit").value;
+			  for (var i = 0; i < array_h_check_id.length; i++)
+			  { 
+				var temp = array_h_check_id[i].split(":");
+				var id_chk = temp[0];
+				var year_chk = temp[1];
+				if (id_chk == text && year == year_chk && !(text == old_id && year == old_year))
+				{
+					alert("รหัสนี้ถูกบันทึกในปี "+(year+543)+" เรียบร้อยแล้ว");
+					document.getElementById("survey_datefirst").value="";
+					document.getElementById("survey_datefirst").focus();
+					return true ;
+				}
+			  }
+		}
+	);
 }
 //--------------------- Select --------------------------
 function select_hospitol(){
@@ -2449,7 +2443,7 @@ function check_submit()
         <tr>
       
         <td class="menu_right"> <span class="menu_right">แบบสอบถามหมายเลข : </span></td>
-        <td colspan="3"><input name="file_id" type="text" id="file_id" size="5" maxlength="5"  onkeyup="check_int('file_id');clearDate();" onblur="chkLenId()" onkeypress="return handleEnter(this, event);"  value="<?php echo $survey_id; ?>"/>
+        <td colspan="3"><input name="file_id" type="text" id="file_id" size="4" maxlength="4"  onkeyup="check_int('file_id');clearDate();" onkeypress="return handleEnter(this, event);"  value="<?php echo $survey_id; ?>"/>
         </label>
         <font color="#FF0000">*</font></td>
         </tr>
