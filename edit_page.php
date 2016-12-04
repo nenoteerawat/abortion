@@ -317,18 +317,183 @@ else
 
 echo $check_abortion."<br>";
 
+		$nationality = intval($nationality);
+		$religion = intval($religion);
+		$status = intval($status);
+		$job = intval($job);
+		$education = intval($education);
+		$friend_education = intval($friend_education);
+		$salary = intval($salary);
+		$friend_salary = intval($friend_salary);
+		$pregnancy_history = intval($pregnancy_history);
+		$births_history = intval($births_history);
+		$children_history = intval($children_history);
+		$last_daughter_history = intval($last_daughter_history);
+		$last_daughter_history_2 = intval($last_daughter_history_2);
+		$check_miscarriage = intval($check_miscarriage);
+		$miscarriage = intval($miscarriage);
+		$check_abortion = intval($check_abortion);
+		$abortion = intval($abortion);
+		$plan_pregnant = intval($plan_pregnant);
+		$contraception = intval($contraception);
+		$not_contraception1 = intval($not_contraception1);
+		$not_contraception2 = intval($not_contraception2);
+		$not_contraception3 = intval($not_contraception3);
+		$not_contraception4 = intval($not_contraception4);
+		$not_contraception5 = intval($not_contraception5);
+		$not_contraception6 = intval($not_contraception6);
+		$not_contraception7 = intval($not_contraception7);
+		$not_contraception8 = intval($not_contraception8);
+		$not_contraception9 = intval($not_contraception9);
+		$not_contraception10 = intval($not_contraception10);
+		$not_contraception11 = intval($not_contraception11);
+		$use_contraception1 = intval($use_contraception1);
+		$use_contraception2 = intval($use_contraception2);
+		$use_contraception3 = intval($use_contraception3);
+		$use_contraception4 = intval($use_contraception4);
+		$use_contraception5 = intval($use_contraception5);
+		$use_contraception6 = intval($use_contraception6);
+		$use_contraception7 = intval($use_contraception7);
+		$use_contraception8 = intval($use_contraception8);
+		$use_contraception9 = intval($use_contraception9);
+		$use_contraception10 = intval($use_contraception10);
+		$use_contraception11 = intval($use_contraception11);
+		$use_contraception12 = intval($use_contraception12);
+		$use_contraception13 = intval($use_contraception13);
+		$use_contraception14 = intval($use_contraception14);
+		$use_contraception15 = intval($use_contraception15);
+		$cause_abortion = intval($cause_abortion);
+		$check_problem_health = intval($check_problem_health);
+		$problem_health1 = intval($problem_health1);
+		$problem_health411 = intval($problem_health411);
+		$problem_health511 = intval($problem_health511);
+		$check_problem_money = intval($check_problem_money);
+		$problem_money1 = intval($problem_money1);
+		$problem_money2 = intval($problem_money2);
+		$problem_money3 = intval($problem_money3);
+		$problem_money4 = intval($problem_money4);
+		$check_problem_family = intval($check_problem_family);
+		$problem_family1 = intval($problem_family1);
+		$problem_family2 = intval($problem_family2);
+		$problem_family3 = intval($problem_family3);
+		$problem_family4 = intval($problem_family4);
+		$problem_family5 = intval($problem_family5);
+		$problem_family6 = intval($problem_family6);
+		$problem_family7 = intval($problem_family7);
+		$problem_family8 = intval($problem_family8);
+		$problem_family9 = intval($problem_family9);
+		$problem_family10 = intval($problem_family10);
+		$problem_family11 = intval($problem_family11);
+		$problem_family12 = intval($problem_family12);
+		$group_effect1 = intval($group_effect1);
+		$group_effect2 = intval($group_effect2);
+		$group_effect3 = intval($group_effect3);
+		$group_effect4 = intval($group_effect4);
+		$group_effect5 = intval($group_effect5);
+		$group_effect6 = intval($group_effect6);
+		$group_effect7 = intval($group_effect7);
+		$group_effect8 = intval($group_effect8);
+		$group_effect9 = intval($group_effect9);
+		$group_effect10 = intval($group_effect10);
+		$group_effect11 = intval($group_effect11);
+		$abortionbyself = intval($abortionbyself);
+		$abortion18_11 = intval($abortion18_11);
+		$abortion18_12 = intval($abortion18_12);
+		$abortion18_13 = intval($abortion18_13);
+		$abortion18_14 = intval($abortion18_14);
+		$abortion18_15 = intval($abortion18_15);
+		$abortion18_16 = intval($abortion18_16);
+		$abortion18_17 = intval($abortion18_17);
+		$abortion18_18 = intval($abortion18_18);
+		$abortionbymed1 = intval($abortionbymed1);
+		$abortion18_21 = intval($abortion18_21);
+		$abortion18_22 = intval($abortion18_22);
+		$abortion18_23 = intval($abortion18_23);
+		$abortion18_24 = intval($abortion18_24);
+		$abortion18_25 = intval($abortion18_25);
+		$abortion18_26 = intval($abortion18_26);
+		$abortion18_26 = intval($abortion18_26);
+		$abortionbypublic_health1 = intval($abortionbypublic_health1);
+		$abortion18_31 = intval($abortion18_31);
+		$abortion18_32 = intval($abortion18_32);
+		$abortion18_33 = intval($abortion18_33);
+		$abortion18_34 = intval($abortion18_34);
+		$abortion18_35 = intval($abortion18_35);
+		$abortion18_36 = intval($abortion18_36);
+		$abortion18_37 = intval($abortion18_37);
+		$abortion18_38 = intval($abortion18_38);
+		$abortion18_39 = intval($abortion18_39);
+		$abortion18_310 = intval($abortion18_310);
+		$abortion18_311 = intval($abortion18_311);
+		$abortionbynotmed1 = intval($abortionbynotmed1);
+		$abortion18_41 = intval($abortion18_41);
+		$abortion18_42 = intval($abortion18_42);
+		$abortion18_43 = intval($abortion18_43);
+		$abortion18_44 = intval($abortion18_44);
+		$abortion18_45 = intval($abortion18_45);
+		$abortion18_46 = intval($abortion18_46);
+		$abortion18_47 = intval($abortion18_47);
+		$abortion18_48 = intval($abortion18_48);
+		$abortion18_49 = intval($abortion18_49);
+		$abortion18_410 = intval($abortion18_410);
+		$abortion18_411 = intval($abortion18_411);
+		$abortionbyunknow1 = intval($abortionbyunknow1);
+		$abortion18_51 = intval($abortion18_51);
+		$abortion18_52 = intval($abortion18_52);
+		$abortion18_53 = intval($abortion18_53);
+		$abortion18_54 = intval($abortion18_54);
+		$abortion18_55 = intval($abortion18_55);
+		$abortion18_56 = intval($abortion18_56);
+		$abortion18_57 = intval($abortion18_57);
+		$abortion18_58 = intval($abortion18_58);
+		$abortion18_59 = intval($abortion18_59);
+		$abortion18_510 = intval($abortion18_510);
+		$abortion18_511 = intval($abortion18_511);
+		$ga2 = intval($ga2);
+		$check_group_complications = intval($check_group_complications);
+		$group_complications1 = intval($group_complications1);
+		$bleed1 = intval($bleed1);
+		$bleed2 = intval($bleed2);
+		$group_complications2 = intval($group_complications2);
+		$infection1 = intval($infection1);
+		$infection2 = intval($infection2);
+		$infection3 = intval($infection3);
+		$group_complications3 = intval($group_complications3);
+		$organ1 = intval($organ1);
+		$organ2 = intval($organ2);
+		$organ3 = intval($organ3);
+		$organ4 = intval($organ4);
+		$organ5 = intval($organ5);
+		$organ6 = intval($organ6);
+		$organ7 = intval($organ7);
+		$organ8 = intval($organ8);
+		$group_complications4 = intval($group_complications4);
+		$status_baby = intval($status_baby);
+		$group_disposition = intval($group_disposition);
+		$user_add = intval($user_add);
+		$status_check = intval($status_check);
+		$user_check = intval($user_check);
+
 		$survey_year = date("Y", strtotime($survey_datefirst));
 		$sql = "update abortionsurvey_main_2559 set survey_id = '$survey_id', survey_agency = '$survey_agency', survey_district = '$survey_district', survey_province = '$survey_province', survey_name = '$survey_name', survey_position = '$survey_position', survey_datefirst = '$survey_datefirst', survey_dateend = '$survey_dateend', age = '$age', friend_age = '$friend_age', text_friend_age ='$text_friend_age', nationality ='$nationality', text_nationality = '$text_nationality', religion = '$religion', text_religion = '$text_religion', status ='$status', first_si ='$first_si', job = '$job', text_job1='$text_job1', text_job2 ='$text_job2', education ='$education', text_education ='$text_education', friend_education='$friend_education', text_friend_education ='$text_friend_education', salary ='$salary', text_salary ='$text_salary', friend_salary ='$friend_salary', text_friend_salary ='$text_friend_salary', pregnancy_history ='$pregnancy_history', births_history='$births_history', children_history ='$children_history', last_daughter_history ='$last_daughter_history',last_daughter_history_2 ='$last_daughter_history_2', abortion_history ='$abortion_history', check_miscarriage ='$check_miscarriage', miscarriage= '$miscarriage', check_abortion ='$check_abortion', abortion ='$abortion', first_abortion ='$first_abortion', unknown_abortion ='$unknown_abortion', unknown_abortion_n ='$unknown_abortion_n', not_infor ='$not_infor', plan_pregnant ='$plan_pregnant', contraception ='$contraception', text_contraception1 ='$text_contraception1', not_contraception1 ='$not_contraception1', not_contraception2 ='$not_contraception2', not_contraception3 ='$not_contraception3', not_contraception4 ='$not_contraception4', not_contraception5 ='$not_contraception5', not_contraception6 ='$not_contraception6', not_contraception7 ='$not_contraception7', not_contraception8 ='$not_contraception8', not_contraception9 ='$not_contraception9', not_contraception10 ='$not_contraception10', not_contraception11 ='$not_contraception11', textnot_contraception11 ='$textnot_contraception11', text_contraception2 ='$text_contraception2', use_contraception1 ='$use_contraception1', use_contraception2 ='$use_contraception2', use_contraception3 ='$use_contraception3', use_contraception4 ='$use_contraception4', use_contraception5 ='$use_contraception5', use_contraception6 ='$use_contraception6', use_contraception7 ='$use_contraception7', use_contraception8 ='$use_contraception8', use_contraception9 ='$use_contraception9', use_contraception10 ='$use_contraception10', use_contraception11 ='$use_contraception11', use_contraception12 ='$use_contraception12', use_contraception13 ='$use_contraception13', use_contraception14 ='$use_contraception14', use_contraception15 ='$use_contraception15', textuse_contraception15 ='$textuse_contraception15', cause_abortion ='$cause_abortion', check_problem_health ='$check_problem_health', problem_health1 ='$problem_health1', problem_health411 ='$problem_health411', text_thalassemia ='$text_thalassemia', text_other16_43 ='$text_other16_43', problem_health511 ='$problem_health511', text_other16_51 ='$text_other16_51', text_other16_52 ='$text_other16_52', check_problem_money ='$check_problem_money', problem_money1 ='$problem_money1', problem_money2 ='$problem_money2', problem_money3 ='$problem_money3', text_problem_money ='$text_problem_money', problem_money4 ='$problem_money4', check_problem_family ='$check_problem_family', problem_family1 ='$problem_family1', problem_family2 ='$problem_family2', problem_family3 ='$problem_family3', problem_family4 ='$problem_family4', problem_family5 ='$problem_family5', problem_family6 ='$problem_family6', problem_family7 ='$problem_family7', problem_family8 ='$problem_family8', problem_family9 ='$problem_family9', problem_family10 ='$problem_family10', problem_family11 ='$problem_family11', text_problem_family ='$text_problem_family', problem_family12 ='$problem_family12',	other_reasons ='$other_reasons', group_effect1 ='$group_effect1', group_effect2 ='$group_effect2', group_effect3 ='$group_effect3', group_effect4 ='$group_effect4', group_effect5 ='$group_effect5', group_effect6 ='$group_effect6', group_effect7 ='$group_effect7', group_effect8 ='$group_effect8', group_effect9 ='$group_effect9', group_effect10 ='$group_effect10', group_effect11 ='$group_effect11', text_group_effect ='$text_group_effect', abortionbyself ='$abortionbyself', abortion18_11 ='$abortion18_11', abortion18_12 ='$abortion18_12', abortion18_13 ='$abortion18_13', abortion18_14 ='$abortion18_14', abortion18_15 ='$abortion18_15', abortion18_16 ='$abortion18_16', abortion18_17 ='$abortion18_17', text_abortion18_17 ='$text_abortion18_17', abortion18_18 ='$abortion18_18', text_abortion18_18 ='$text_abortion18_18', abortionbymed1 ='$abortionbymed1', abortion18_21 ='$abortion18_21', abortion18_22 ='$abortion18_22', abortion18_23 ='$abortion18_23', abortion18_24 ='$abortion18_24', abortion18_25 ='$abortion18_25', abortion18_26 ='$abortion18_26', text_abortion18_26 ='$text_abortion18_26', abortionbypublic_health1 ='$abortionbypublic_health1', abortion18_31 ='$abortion18_31', abortion18_32 ='$abortion18_32', abortion18_33 ='$abortion18_33', abortion18_34 ='$abortion18_34', abortion18_35='$abortion18_35', abortion18_36 ='$abortion18_36', abortion18_37 ='$abortion18_37', abortion18_38 ='$abortion18_38', abortion18_39 ='$abortion18_39', text_abortion18_38 ='$text_abortion18_38', abortion18_310 ='$abortion18_310', text_abortion18_39 ='$text_abortion18_39', abortion18_311 ='$abortion18_311', abortionbynotmed1 ='$abortionbynotmed1', abortion18_41 ='$abortion18_41', abortion18_42 ='$abortion18_42', abortion18_43 ='$abortion18_43', abortion18_44 ='$abortion18_44', abortion18_45 ='$abortion18_45', abortion18_46 ='$abortion18_46', abortion18_47 ='$abortion18_47', abortion18_48 ='$abortion18_48', abortion18_49 ='$abortion18_49', text_abortion18_48 ='$text_abortion18_48', abortion18_410 ='$abortion18_410', text_abortion18_49 ='$text_abortion18_49', abortion18_411 ='$abortion18_411', abortionbyunknow1 ='$abortionbyunknow1', abortion18_51 ='$abortion18_51', abortion18_52 ='$abortion18_52', abortion18_53 ='$abortion18_53', abortion18_54 ='$abortion18_54', abortion18_55 ='$abortion18_55', abortion18_56 ='$abortion18_56', abortion18_57 ='$abortion18_57', abortion18_58 ='$abortion18_58', abortion18_59 ='$abortion18_59', text_abortion18_58 ='$text_abortion18_58', abortion18_510 ='$abortion18_510', text_abortion18_59 ='$text_abortion18_59', abortion18_511 ='$abortion18_511', ga2 ='$ga2', check_group_complications ='$check_group_complications', group_complications1 ='$group_complications1', bleed1 ='$bleed1', bleed2 ='$bleed2', group_complications2 ='$group_complications2', infection1 ='$infection1', infection2 ='$infection2', infection3 ='$infection3', group_complications3 ='$group_complications3', organ1 ='$organ1', organ2 ='$organ2', organ3 ='$organ3', organ4 ='$organ4', organ5 ='$organ5', organ6 ='$organ6', organ7 ='$organ7', organ8 ='$organ8', group_complications4 ='$group_complications4', text_other_med1 ='$text_other_med1', text_other_med2 ='$text_other_med2', text_other_med3 ='$text_other_med3', status_baby ='$status_baby', group_disposition ='$group_disposition', text_group_disposition1 ='$text_group_disposition1', data_add ='$today', time_add ='$now_time', user_add ='".$_SESSION["ss_id"]."', ip_add ='$ipaddress', status_check ='$status_check', user_check ='$user_check', survey_year = '$survey_year' where survey_id = '$h_id_edit' and survey_year = '$h_year_edit' ";
-
 		$result = mysql_query($sql);
 	
-$_SESSION["ss_survey_name"] = $survey_name;
-$_SESSION["ss_survey_position"] = $survey_position;
+		$_SESSION["ss_survey_name"] = $survey_name;
+		$_SESSION["ss_survey_position"] = $survey_position;
 
-		echo "<script>
-		alert('แก้ไขข้อมูล ".$survey_id." เรียบร้อยแล้ว');
-		window.location = 'show.php';
-		</script>";
+		if($result){
+			echo"<script>
+			alert('บันทึกข้อมูล ".$survey_id." เรียบร้อยแล้ว');
+			window.location = 'index.php#tabs-2';
+			</script>";	
+		}
+		else{
+			echo"<script>
+			//alert('".mysql_error()."');
+			window.location = 'index.php#tabs-2';
+			</script>";
+			
+		}
 	}
 
 ?>
@@ -2202,7 +2367,7 @@ function check_submit()
 		
 ?>
 <div class="broder_set" style="width:908px">
-<div align="center"><img src="image/h.jpg" width="900" height="140" /></div>
+<div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">
   <h3>Username : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">Logout</a></h3></div>

@@ -8,11 +8,12 @@ session_start();
 	$today = date("Y-m-d");
 	$now_time = date("H:i:s");	
 	
-	$h_id = $_POST['data'];
+	$h_id = $_POST['survey_id'];
+	$h_year = $_POST['survey_year'];
 
 	//echo "--->".$h_id ;
 
-	$sql = "delete from abortionsurvey_main where survey_id='$h_id'";
+	$sql = "delete from abortionsurvey_main_2559 where survey_id='$h_id' and survey_year = '$h_year'";
 	//echo "--->".$sql;
 	$result = mysql_query($sql);		
 	

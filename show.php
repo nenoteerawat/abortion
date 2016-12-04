@@ -57,18 +57,18 @@ filter:alpha(opacity=60);
     
     <script>
 //------------------------------------------- Delete ----------------------------------
-	function postData(a)
+	function postData(id,year)
 		{
 			
-			$.post( "delete_file.php", { data:a} );
+			$.post( "delete_file.php", { survey_id:id, survey_year:year} );
 			location.reload();
 		}
 	
-	function alert_delete(id) 
+	function alert_delete(id,year) 
 		{
 			if(confirm('Confirm delete'))
 				{ 
-					postData(id); 
+					postData(id,year); 
 					return true;
 				} 
 			else
