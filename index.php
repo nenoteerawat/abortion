@@ -27,7 +27,8 @@ if(!empty($_POST['h_submit']))
 		
 		$hospital_id = $_POST['hospital_id'];
 		$file_id = $_POST['file_id'];
-		
+		for($i = strlen($file_id); $i < 4; $i++)
+			$file_id = "0".$file_id ;
 		$survey_agency = $_POST['survey_agency'];
 		$survey_district = $_POST['survey_district'];
 		$survey_province = $_POST['survey_province'];
@@ -625,6 +626,9 @@ function toId(){
 		id  = "0"+id;
 	}
 	return id;
+}
+function convertId(){
+	document.getElementById("file_id").value = toId(document.getElementById("file_id").value);
 }
 function clearDate(){
 	$.post("check_id.php",
@@ -2450,7 +2454,7 @@ function check_submit()
         <tr>
       
         <td class="menu_right"> <span class="menu_right">แบบสอบถามหมายเลข : </span></td>
-        <td colspan="3"><input name="file_id" type="text" id="file_id" size="4" maxlength="4"  onkeyup="check_int('file_id');clearDate();" onkeypress="return handleEnter(this, event);" />
+        <td colspan="3"><input name="file_id" type="text" id="file_id" size="4" maxlength="4"  onkeyup="check_int('file_id');clearDate();" onblur="convertId();" onkeypress="return handleEnter(this, event);" />
         </label>
         <font color="#FF0000">*</font></td>
         </tr>
