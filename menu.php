@@ -196,10 +196,10 @@ opacity: 1;
 		<li>
 			<?php 
 		if($_SESSION["ss_lavel"]==1){ 
-				echo '<a href="summarize_admin.php">สรุปรายงาน</a>';
+				echo '<a href="summarize_edit.php">สรุปรายงาน</a>';
 			}
 			else{
-				echo '<a href="summarize.php">สรุปรายงาน</a>';
+				echo '<a href="summarize_edit.php">สรุปรายงาน</a>';
 			}?>
 		</li>
         <li>

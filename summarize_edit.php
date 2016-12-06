@@ -10,11 +10,11 @@
 	
 	include("connect.php");
 	
-	$id=$_GET['id'];
+	//$id=$_GET['id'];
 	
-	$sql = "select * from abortionsurvey_main where survey_id = '$id'";
-	$result = mysql_query($sql);
-	$data = mysql_fetch_array($result);
+	//$sql = "select * from abortionsurvey_main where survey_id = '$id'";
+	//$result = mysql_query($sql);
+	//$data = mysql_fetch_array($result);
 	
 
 ?>
@@ -132,7 +132,7 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 
   <tr>  
     <td class="select_menu"><center>
-      <p><a href="<?php echo $data['id_menu']; ?>"><?php echo $data['name_menu']; ?></a></p>
+      <p><a href="summarize_search.php?id=<?php echo $data['id_menu']; ?>"><?php echo $data['name_menu']; ?></a></p>
     </center></td>
   </tr>
   
