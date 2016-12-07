@@ -40,6 +40,10 @@
 		$year = $_POST['year'];
 		$search_query = $search_query." and survey_year = '$year'";
 	}
+	if(!empty($_POST['survey_hospital'])){
+		$survey_hospital = $_POST['survey_hospital'];
+		$search_query = $search_query." and survey_agency = '$survey_hospital'";
+	}
 	
 	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query;
 	$query = preg_replace("/and/","where",$query,1);
@@ -139,86 +143,82 @@
 	<td >จำนวน</td>
 	<td >ร้อยละ</td>
   </tr>
-  <tr bgcolor="#f19f9f" class="color_text">
+  <tr bgcolor="#f19f9f" class="text_table">
 	<td ></td>
-	<td colspan="2">n = <?php echo $result_all['count']?></td>
-	<td colspan="2">n = <?php echo $result_self['count']?></td>
-	<td colspan="2">n = <?php echo $result_done['count']?></td>
-  </tr>
-<?php
-	
-	
-?>  
+	<td colspan="2" align="center">n = <?php echo toNumber($result_all['count'])?></td>
+	<td colspan="2" align="center">n = <?php echo toNumber($result_self['count'])?></td>
+	<td colspan="2" align="center">n = <?php echo toNumber($result_done['count'])?></td>
+  </tr> 
   <tr bgcolor="#ffffff" class="text_table">
-    <td align="center">&lt; 15 ปี</td>
-    <td align="center"><?php echo $result_all_15['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_15['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_15['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_15['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_15['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_15['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">&lt; 15</td>
+    <td align="center"><?php echo toNumber($result_all_15['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_15['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_15['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_15['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_15['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_15['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td align="center">15 &ndash; 19 ปี</td>
-    <td align="center"><?php echo $result_all_15_19['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_15_19['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_15_19['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_15_19['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_15_19['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_15_19['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">15 &ndash; 19</td>
+    <td align="center"><?php echo toNumber($result_all_15_19['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_15_19['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_15_19['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_15_19['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_15_19['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_15_19['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td align="center">20 &ndash; 24 ปี</td>
-    <td align="center"><?php echo $result_all_20_24['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_20_24['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_20_24['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_20_24['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_20_24['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_20_24['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">20 &ndash; 24</td>
+    <td align="center"><?php echo toNumber($result_all_20_24['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_20_24['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_20_24['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_20_24['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_20_24['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_20_24['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td align="center">25 &ndash; 29 ปี</td>
-    <td align="center"><?php echo $result_all_25_29['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_25_29['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_25_29['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_25_29['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_25_29['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_25_29['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">25 &ndash; 29</td>
+    <td align="center"><?php echo toNumber($result_all_25_29['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_25_29['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_25_29['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_25_29['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_25_29['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_25_29['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td align="center">30 &ndash; 34 ปี</td>
-    <td align="center"><?php echo $result_all_30_34['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_30_34['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_30_34['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_30_34['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_30_34['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_30_34['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">30 &ndash; 34</td>
+    <td align="center"><?php echo toNumber($result_all_30_34['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_30_34['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_30_34['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_30_34['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_30_34['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_30_34['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td align="center">35 &ndash; 39 ปี</td>
-    <td align="center"><?php echo $result_all_35_39['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_35_39['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_35_39['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_35_39['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_35_39['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_35_39['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">35 &ndash; 39</td>
+    <td align="center"><?php echo toNumber($result_all_35_39['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_35_39['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_35_39['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_35_39['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_35_39['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_35_39['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td align="center">40 &ndash; 44 ปี</td>
-    <td align="center"><?php echo $result_all_40_44['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_40_44['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_40_44['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_40_44['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_40_44['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_40_44['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">40 &ndash; 44</td>
+    <td align="center"><?php echo toNumber($result_all_40_44['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_40_44['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_40_44['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_40_44['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_40_44['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_40_44['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td align="center">&ge; 45 ปี</td>
-    <td align="center"><?php echo $result_all_45['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all_45['count']/$result_all['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_self_45['count']?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? round($result_self_45['count']/$result_self['count']*100,1):'-'?></td>
-	<td align="center"><?php echo $result_done_45['count']?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? round($result_done_45['count']/$result_done['count']*100,1):'-'?></td>
+    <td align="center">&ge; 45</td>
+    <td align="center"><?php echo toNumber($result_all_45['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_45['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_45['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_45['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_45['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_45['count']/$result_done['count']*100):'-'?></td>
   </tr>
 </table>

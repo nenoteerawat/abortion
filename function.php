@@ -1,5 +1,5 @@
 <?php
-function monthToString($month){
+	function monthToString($month){
 		switch($month){
 			case 1 : return "มกราคม";break;
 			case 2 : return "กุมภาพันธ์";break;
@@ -39,4 +39,10 @@ function monthToString($month){
 			case "12" : return "ธ.ค.";break;
 			default : return $month;
 		}
+	}
+	function toDecimal($number){
+		return number_format($number, 1, '.', ',');
+	}
+	function toNumber($number){
+		return number_format($number, 0, '.', ',');
 	}

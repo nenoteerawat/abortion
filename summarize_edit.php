@@ -90,8 +90,8 @@
 	
 }
 .select_menu:hover { 
-text-decoration: none; 
-background-color:#339; /* โค๊ดสีพื้นหลัง */
+	text-decoration: none; 
+	background-color:#339; /* โค๊ดสีพื้นหลัง */
 }
 .select_menu a:link {
 	color: #FFF;
@@ -101,6 +101,19 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 }
 .select_menu a:active {
 	color: #FFF;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	font-size: 30px;
+}
+.head_sum{
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 </style>
 
@@ -118,8 +131,9 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 <div align="right">
   <h3>Username : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">Logout</a></h3></div>
   
-  
+<div class="head_sum">จำนวนและร้อยละผู้ป่วยแท้งและทำแท้ง จำแนกตาม</div>
 <div class="broder_set" align="center" style="width:804px" >
+
 <table width="100%" border="0" cellspacing="2" cellpadding="10" class="summarize">  
 
 <?php
@@ -129,12 +143,11 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 
 	{
 ?>
-
-  <tr>  
-    <td class="select_menu"><center>
-      <p><a href="summarize_search.php?id=<?php echo $data['id_menu']; ?>"><?php echo $data['name_menu']; ?></a></p>
-    </center></td>
-  </tr>
+	<tr>  
+		<td class="select_menu"><center>
+			<p><a href="summarize_search.php?id=<?php echo $data['id_menu']; ?>"><?php echo $data['id_menu'].". ".$data['name_menu']; ?></a></p>
+		</center></td>
+	</tr>
   
 <?php
 	}

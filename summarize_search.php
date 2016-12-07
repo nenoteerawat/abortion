@@ -56,7 +56,7 @@
 		}
 		
 function data_show_seacrh(){
-	$.post("summarize_search_show_<?php echo $menu_id; ?>.php", { survey_province : $("#survey_province").val(), month : $("#l_month").val(), year : $("#l_year").val()}, 
+	$.post("summarize_search_show_<?php echo $menu_id; ?>.php", { survey_province : $("#survey_province").val(), month : $("#l_month").val(), year : $("#l_year").val(), survey_hospital : $("#survey_hospital").val()}, 
 		function(response){
 			$("#show_text_2").html(response);
 		}
@@ -76,8 +76,8 @@ function data_show_seacrh(){
 <form id="form1" name="form1" method="post" action="">
     <table width="100%" border="0" cellspacing="3" cellpadding="2"  bgcolor="#3399CC">
       <tr>
-        <td width="5%"><h3><font color="#FFFFFF">เดือน</font></h3></td>
-        <td width="5%"><label for="l_month"></label>
+        <td align="right"><h3><font color="#FFFFFF">เดือน : </font></h3></td>
+        <td align="left"><label for="l_month"></label>
         <select name="l_month" size="1" id="l_month"  onchange="data_show_seacrh()">
 		<option value="0">--เลือก--</option>
 		<?php
@@ -114,8 +114,8 @@ function data_show_seacrh(){
 		?>
 
         </select></td>
-        <td width="5%"><h3><font color="#FFFFFF">ปี : </font></h3></td>
-        <td width="5%"><label for="l_year"></label>
+        <td align="right"><h3><font color="#FFFFFF">ปี : </font></h3></td>
+        <td align="left"><label for="l_year"></label>
 			<select name="l_year" size="1" id="l_year"  onchange="data_show_seacrh()">
 			<option value="0">--เลือก--</option>
 			<?php
@@ -138,15 +138,19 @@ function data_show_seacrh(){
 		{
 ?>
 
-        <td width="10%"><h3><font color="#FFFFFF">จังหวัด : </font></h3></td>
-        <td width="19%"><?php include("list_province_show_sum.php"); ?></td>
+        <td align="right"><h3><font color="#FFFFFF">จังหวัด : </font></h3></td>
+        <td align="left"><?php include("list_province_show_sum.php"); ?></td>
 <?php
 		}
+	if($_SESSION["ss_lavel"] == 3){
+?>
+		<td align="right"><h3><font color="#FFFFFF">โรงพยาบาล : </font></h3></td>
+        <td align="left"><?php include("list_hospital_show_sum.php"); ?></td>
+<?php
+	}
 ?>	
-        <td width="8%"></td>
-        <td width="31%"></td>
-                    
-        <td width="32%" class="menu_right"></td>
+
+        
       </tr>
     </table>
 </form>

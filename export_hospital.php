@@ -158,7 +158,7 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 		<select name="l_month" size="1" id="l_month">
 			<option value="0">--เลือก--</option>
 			<?php
-			$sql = "select distinct MONTH(survey_datefirst) as survey_month from abortionsurvey_main_2559 where user_add = '".$_SESSION["ss_id"]."'";
+			$sql = "select distinct MONTH(survey_datefirst) as survey_month from abortionsurvey_main_2559 where survey_id like '".$_SESSION['ss_hospital_id']."%'";
 			$result = mysql_query($sql);
 
 			while ($row = mysql_fetch_assoc($result)){
@@ -172,7 +172,7 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 		<select name="l_year" size="1" id="l_year" >
 			<option value="0">--เลือก--</option>
 			<?php
-			$sql = "select distinct survey_year from abortionsurvey_main_2559 where user_add = '".$_SESSION["ss_id"]."'";
+			$sql = "select distinct survey_year from abortionsurvey_main_2559 where survey_id like '".$_SESSION['ss_hospital_id']."%'";
 			$result = mysql_query($sql);
 
 			while ($row = mysql_fetch_assoc($result))

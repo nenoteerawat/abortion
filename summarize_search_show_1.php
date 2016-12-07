@@ -40,6 +40,10 @@
 		$year = $_POST['year'];
 		$search_query = $search_query." and survey_year = '$year'";
 	}
+	if(!empty($_POST['survey_hospital'])){
+		$survey_hospital = $_POST['survey_hospital'];
+		$search_query = $search_query." and survey_agency = '$survey_hospital'";
+	}
 	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query;
 	$query = preg_replace("/and/","where",$query,1);
 	$result_all = mysql_query($query);
@@ -59,24 +63,20 @@
     <td width="50%">ประเภทการแท้ง</td>
     <td width="25%">จำนวน</td>
     <td width="25%">ร้อยละ</td>
-  </tr>
-<?php
-	
-	
-?>  
+  </tr> 
   <tr bgcolor="#ffffff" class="text_table">
-    <td align="center">ผู้ป่วยแท้งทั้งหมด</td>
-    <td align="center"><?php echo $result_all['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_all['count']/$result_all['count']*100,1) : '-'?></td>
+    <td >1. ผู้ป่วยแท้งทั้งหมด</td>
+    <td align="center"><?php echo toNumber($result_all['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all['count']/$result_all['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td align="center">แท้งเอง</td>
-    <td align="center"><?php echo $result_self['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_self['count']/$result_all['count']*100,1) : '-'?></td>
+    <td >2. แท้งเอง</td>
+    <td align="center"><?php echo toNumber($result_self['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_self['count']/$result_all['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td align="center">ทำแท้ง</td>
-    <td align="center"><?php echo $result_done['count']?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? round($result_done['count']/$result_all['count']*100,1) : '-'?></td>
+    <td >3. ทำแท้ง</td>
+    <td align="center"><?php echo toNumber($result_done['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_done['count']/$result_all['count']*100) : '-'?></td>
   </tr>
 </table>
