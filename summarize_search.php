@@ -103,7 +103,7 @@ function data_show_seacrh(){
 		$sql_text_sum = str_replace("="," or ",$sql_text);
 		$sql = "select distinct MONTH(survey_datefirst) as survey_month from abortionsurvey_main_2559 where (".$sql_text_sum.") order by survey_month";
 		if($_SESSION['ss_lavel']== 2)
-			$sql = "select distinct MONTH(survey_datefirst) as survey_month from abortionsurvey_main_2559 where user_add = '".$_SESSION["ss_id"]."' order by survey_month";
+			$sql = "select distinct MONTH(survey_datefirst) as survey_month from abortionsurvey_main_2559 where survey_id like '".$_SESSION['ss_hospital_id']."%' order by survey_month";
 		$result = mysql_query($sql);
 
 		while ($row = mysql_fetch_assoc($result)){
@@ -121,7 +121,7 @@ function data_show_seacrh(){
 			<?php
 			$sql = "select distinct survey_year from abortionsurvey_main_2559 where (".$sql_text_sum.")";
 			if($_SESSION['ss_lavel']== 2)
-				$sql = "select distinct survey_year from abortionsurvey_main_2559 where user_add = '".$_SESSION["ss_id"]."'";
+				$sql = "select distinct survey_year from abortionsurvey_main_2559 where survey_id like '".$_SESSION['ss_hospital_id']."%'";
 			$result = mysql_query($sql);
 
 			while ($row = mysql_fetch_assoc($result))

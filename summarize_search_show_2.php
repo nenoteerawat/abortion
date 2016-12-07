@@ -4,7 +4,7 @@
 	include("connect.php");
 	$search_query = "";
 	if($_SESSION['ss_lavel']== 2){
-		$search_query = " and user_add = '".$_SESSION['ss_id']."'";
+		$search_query = " and survey_id like '".$_SESSION['ss_hospital_id']."%'";
 	}
 	else if($_SESSION['ss_lavel']== 3 || $_SESSION['ss_lavel']== 4){
 		$sql_text = "";
@@ -123,7 +123,7 @@
 	
 	
 ?>
-<h3 align="center">จำนวนและร้อยละผู้ป่วยแท้งและทำแท้งจำแนกตามกลุ่มอายุ</h3>
+<h3 align="center">จำนวนและร้อยละผู้ป่วยแท้งและทำแท้ง จำแนกตามกลุ่มอายุ</h3>
 <table width="100%" border="0" cellspacing="2" cellpadding="3">
   <tr bgcolor="#3399CC" class="color_text">
     <td width="25%" rowspan="2">กลุ่มอายุ &#40;ปี&#41;</td>
@@ -140,7 +140,7 @@
 	<td >ร้อยละ</td>
   </tr>
   <tr bgcolor="#f19f9f" class="color_text">
-	<td > </td>
+	<td ></td>
 	<td colspan="2">n = <?php echo $result_all['count']?></td>
 	<td colspan="2">n = <?php echo $result_self['count']?></td>
 	<td colspan="2">n = <?php echo $result_done['count']?></td>
