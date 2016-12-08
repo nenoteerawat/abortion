@@ -97,6 +97,15 @@
 	<td align="center"></td>
 	<td align="center"></td>
   </tr>
+  <tr bgcolor="#ffffff" class="text_table">
+    <td >&nbsp&nbsp&ndash;&nbspไม่ยินดีให้ข้อมูล</td>
+    <td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+  </tr>
   <tr bgcolor="#f19f9f" class="text_table">
     <td >การคุมกำเนิดในการตั้งครรภ์ครั้งนี้</td>
     <td colspan="2" align="center">n = </td>
@@ -114,6 +123,15 @@
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&ndash;&nbspไม่ใช้</td>
+    <td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+	<td align="center"></td>
+  </tr>
+  <tr bgcolor="#ffffff" class="text_table">
+    <td >&nbsp&nbsp&ndash;&nbspไม่ยินดีให้ข้อมูล</td>
     <td align="center"></td>
 	<td align="center"></td>
 	<td align="center"></td>

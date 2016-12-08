@@ -48,14 +48,73 @@
 	$query = preg_replace("/and/","where",$query,1);
 	$result_all = mysql_query($query);
 	$result_all = mysql_fetch_array($result_all);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 < 5";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_5 = mysql_query($query);
+	$result_all_5 = mysql_fetch_array($result_all_5);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 >= 5 and ga2 <= 8";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_5_8 = mysql_query($query);
+	$result_all_5_8 = mysql_fetch_array($result_all_5_8);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 >= 9 and ga2 <= 12";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_9_12 = mysql_query($query);
+	$result_all_9_12 = mysql_fetch_array($result_all_9_12);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 >= 13 and ga2 <= 16";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_13_16 = mysql_query($query);
+	$result_all_13_16 = mysql_fetch_array($result_all_13_16);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 >= 17 and ga2 <= 22";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_17_22 = mysql_query($query);
+	$result_all_17_22 = mysql_fetch_array($result_all_17_22);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 >= 23 and ga2 <= 28";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_23_28 = mysql_query($query);
+	$result_all_23_28 = mysql_fetch_array($result_all_23_28);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 >= 29";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_29 = mysql_query($query);
+	$result_all_29 = mysql_fetch_array($result_all_29);
+	
+	
 	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_self = mysql_query($query);
 	$result_self = mysql_fetch_array($result_self);
+	$result_self_5 = mysql_query($query." and ga2 < 5");
+	$result_self_5 = mysql_fetch_array($result_self_5);
+	$result_self_5_8 = mysql_query($query." and ga2 >= 5 and ga2 <= 8");
+	$result_self_5_8 = mysql_fetch_array($result_self_5_8);
+	$result_self_9_12 = mysql_query($query." and ga2 >= 9 and ga2 <= 12");
+	$result_self_9_12 = mysql_fetch_array($result_self_9_12);
+	$result_self_13_16 = mysql_query($query." and ga2 >= 13 and ga2 <= 16");
+	$result_self_13_16 = mysql_fetch_array($result_self_13_16);
+	$result_self_17_22 = mysql_query($query." and ga2 >= 17 and ga2 <= 22");
+	$result_self_17_22 = mysql_fetch_array($result_self_17_22);
+	$result_self_23_28 = mysql_query($query." and ga2 >= 23 and ga2 <= 28");
+	$result_self_23_28 = mysql_fetch_array($result_self_23_28);
+	$result_self_29 = mysql_query($query." and ga2 >= 29");
+	$result_self_29 = mysql_fetch_array($result_self_29);
+	
 	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_done = mysql_query($query);
 	$result_done = mysql_fetch_array($result_done);
+	$result_done_5 = mysql_query($query." and ga2 < 5");
+	$result_done_5 = mysql_fetch_array($result_done_5);
+	$result_done_5_8 = mysql_query($query." and ga2 >= 5 and ga2 <= 8");
+	$result_done_5_8 = mysql_fetch_array($result_done_5_8);
+	$result_done_9_12 = mysql_query($query." and ga2 >= 9 and ga2 <= 12");
+	$result_done_9_12 = mysql_fetch_array($result_done_9_12);
+	$result_done_13_16 = mysql_query($query." and ga2 >= 13 and ga2 <= 16");
+	$result_done_13_16 = mysql_fetch_array($result_done_13_16);
+	$result_done_17_22 = mysql_query($query." and ga2 >= 17 and ga2 <= 22");
+	$result_done_17_22 = mysql_fetch_array($result_done_17_22);
+	$result_done_23_28 = mysql_query($query." and ga2 >= 23 and ga2 <= 28");
+	$result_done_23_28 = mysql_fetch_array($result_done_23_28);
+	$result_done_29 = mysql_query($query." and ga2 >= 29");
+	$result_done_29 = mysql_fetch_array($result_done_29);
 ?>
 <h3 align="center">จำนวนและร้อยละผู้ป่วยแท้งและทำแท้ง จำแนกตามอายุครรภ์ที่แท้ง</h3>
 <table width="100%" border="0" cellspacing="2" cellpadding="3">
@@ -81,64 +140,65 @@
   </tr>  
   <tr bgcolor="#ffffff" class="text_table">
     <td align="center">&lt; 5</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td align="center"><?php echo toNumber($result_all_5['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_5['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_5['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_5['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_5['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_5['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td align="center">5 &ndash; 8</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td align="center"><?php echo toNumber($result_all_5_8['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_5_8['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_5_8['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_5_8['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_5_8['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_5_8['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td align="center">9 &ndash; 12</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td align="center"><?php echo toNumber($result_all_9_12['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_9_12['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_9_12['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_9_12['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_9_12['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_9_12['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td align="center">13 &ndash; 16</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td align="center"><?php echo toNumber($result_all_13_16['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_13_16['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_13_16['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_13_16['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_13_16['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_13_16['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td align="center">17 &ndash; 22</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td align="center"><?php echo toNumber($result_all_17_22['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_17_22['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_17_22['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_17_22['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_17_22['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_17_22['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td align="center">23 &ndash; 28</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td align="center"><?php echo toNumber($result_all_23_28['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_23_28['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_23_28['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_23_28['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_23_28['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_23_28['count']/$result_done['count']*100):'-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td align="center">&ge; 29</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td align="center"><?php echo toNumber($result_all_29['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_29['count']/$result_all['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_self_29['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_29['count']/$result_self['count']*100):'-'?></td>
+	<td align="center"><?php echo toNumber($result_done_29['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_29['count']/$result_done['count']*100):'-'?></td>
   </tr>
 </table>

@@ -65,17 +65,17 @@
     <td width="25%">ร้อยละ</td>
   </tr> 
   <tr bgcolor="#ffffff" class="text_table">
-    <td >1. ผู้ป่วยแท้งทั้งหมด</td>
+    <td >ผู้ป่วยแท้งทั้งหมด</td>
     <td align="center"><?php echo toNumber($result_all['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all['count']/$result_all['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >2. แท้งเอง</td>
+    <td >&nbsp&nbsp&nbsp&nbspแท้งเอง</td>
     <td align="center"><?php echo toNumber($result_self['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_self['count']/$result_all['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td >3. ทำแท้ง</td>
+    <td >&nbsp&nbsp&nbsp&nbspทำแท้ง</td>
     <td align="center"><?php echo toNumber($result_done['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_done['count']/$result_all['count']*100) : '-'?></td>
   </tr>

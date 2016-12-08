@@ -131,7 +131,7 @@
 	<td colspan="2" align="center">n = <?php echo toNumber($result_done['count'])?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td >1. ไม่เคยอยู่กินฉันท์สามีภรรยากับชายใด</td>
+    <td >ไม่เคยอยู่กินฉันท์สามีภรรยากับชายใด</td>
     <td align="center"><?php echo toNumber($result_all_not_live_together['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_not_live_together['count']/$result_all['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_not_live_together['count'])?></td>
@@ -140,7 +140,7 @@
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_not_live_together['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >2. ปัจจุบันอยู่กินฉันสามีภรรยากับชายใดชายหนึ่ง</td>
+    <td >ปัจจุบันอยู่กินฉันสามีภรรยากับชายใดชายหนึ่ง</td>
     <td align="center"><?php echo toNumber($result_all_live_together['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_live_together['count']/$result_all['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_live_together['count'])?></td>
@@ -149,7 +149,7 @@
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_live_together['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td >3. เคยอยู่กินกับชายใดชายหนึ่งแต่ปัจจุบันเลิกกันแล้วหรือสามีเสียชีวิต</td>
+    <td >เคยอยู่กินกับชายใดชายหนึ่งแต่ปัจจุบันเลิกกันแล้วหรือสามีเสียชีวิต</td>
     <td align="center"><?php echo toNumber($result_all_lived_together['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_lived_together['count']/$result_all['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_lived_together['count'])?></td>
@@ -158,7 +158,7 @@
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_lived_together['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >4. ไม่ยินดีให้ข้อมูล</td>
+    <td >ไม่ยินดีให้ข้อมูล</td>
     <td align="center"><?php echo toNumber($result_all_no_info['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_no_info['count']/$result_all['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_no_info['count'])?></td>

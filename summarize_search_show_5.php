@@ -56,6 +56,137 @@
 	$query = preg_replace("/and/","where",$query,1);
 	$result_done = mysql_query($query);
 	$result_done = mysql_fetch_array($result_done);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 1";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_1 = mysql_query($query);
+	$result_all_job_1 = mysql_fetch_array($result_all_job_1);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 1";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_1 = mysql_query($query);
+	$result_self_job_1 = mysql_fetch_array($result_self_job_1);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 1";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_1 = mysql_query($query);
+	$result_done_job_1 = mysql_fetch_array($result_done_job_1);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 2";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_2 = mysql_query($query);
+	$result_all_job_2 = mysql_fetch_array($result_all_job_2);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 2";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_2 = mysql_query($query);
+	$result_self_job_2 = mysql_fetch_array($result_self_job_2);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 2";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_2 = mysql_query($query);
+	$result_done_job_2 = mysql_fetch_array($result_done_job_2);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 3";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_3 = mysql_query($query);
+	$result_all_job_3 = mysql_fetch_array($result_all_job_3);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 3";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_3 = mysql_query($query);
+	$result_self_job_3 = mysql_fetch_array($result_self_job_3);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 3";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_3 = mysql_query($query);
+	$result_done_job_3 = mysql_fetch_array($result_done_job_3);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 4";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_4 = mysql_query($query);
+	$result_all_job_4 = mysql_fetch_array($result_all_job_4);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 4";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_4 = mysql_query($query);
+	$result_self_job_4 = mysql_fetch_array($result_self_job_4);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 4";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_4 = mysql_query($query);
+	$result_done_job_4 = mysql_fetch_array($result_done_job_4);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 5";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_5 = mysql_query($query);
+	$result_all_job_5 = mysql_fetch_array($result_all_job_5);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 5";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_5 = mysql_query($query);
+	$result_self_job_5 = mysql_fetch_array($result_self_job_5);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 5";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_5 = mysql_query($query);
+	$result_done_job_5 = mysql_fetch_array($result_done_job_5);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 6";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_6 = mysql_query($query);
+	$result_all_job_6 = mysql_fetch_array($result_all_job_6);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 6";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_6 = mysql_query($query);
+	$result_self_job_6 = mysql_fetch_array($result_self_job_6);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 6";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_6 = mysql_query($query);
+	$result_done_job_6 = mysql_fetch_array($result_done_job_6);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 7";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_7 = mysql_query($query);
+	$result_all_job_7 = mysql_fetch_array($result_all_job_7);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 7";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_7 = mysql_query($query);
+	$result_self_job_7 = mysql_fetch_array($result_self_job_7);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 7";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_7 = mysql_query($query);
+	$result_done_job_7 = mysql_fetch_array($result_done_job_7);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 8";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_8 = mysql_query($query);
+	$result_all_job_8 = mysql_fetch_array($result_all_job_8);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 8";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_8 = mysql_query($query);
+	$result_self_job_8 = mysql_fetch_array($result_self_job_8);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 8";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_8 = mysql_query($query);
+	$result_done_job_8 = mysql_fetch_array($result_done_job_8);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 9";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_9 = mysql_query($query);
+	$result_all_job_9 = mysql_fetch_array($result_all_job_9);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 9";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_9 = mysql_query($query);
+	$result_self_job_9 = mysql_fetch_array($result_self_job_9);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 9";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_9 = mysql_query($query);
+	$result_done_job_9 = mysql_fetch_array($result_done_job_9);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and job = 10";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_job_10 = mysql_query($query);
+	$result_all_job_10 = mysql_fetch_array($result_all_job_10);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and job = 10";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_job_10 = mysql_query($query);
+	$result_self_job_10 = mysql_fetch_array($result_self_job_10);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and job = 10";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_job_10 = mysql_query($query);
+	$result_done_job_10 = mysql_fetch_array($result_done_job_10);
+	
 ?>
 <h3 align="center">จำนวนและร้อยละผู้ป่วยแท้งและทำแท้ง จำแนกตามอาชีพของผู้ป่วย</h3>
 <table width="100%" border="0" cellspacing="2" cellpadding="3">
@@ -80,93 +211,93 @@
 	<td colspan="2" align="center">n = <?php echo toNumber($result_done['count'])?></td>
   </tr>  
   <tr bgcolor="#ffffff" class="text_table">
-    <td >1. กำลังศึกษา</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >กำลังศึกษา</td>
+    <td align="center"><?php echo toNumber($result_all_job_1['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_1['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_1['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_1['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_1['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_1['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >2. แม่บ้าน</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >แม่บ้าน</td>
+    <td align="center"><?php echo toNumber($result_all_job_2['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_2['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_2['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_2['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_2['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_2['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td >3. ค้าขายหรือประกอบธุรกิจส่วนตัว</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >ค้าขายหรือประกอบธุรกิจส่วนตัว</td>
+    <td align="center"><?php echo toNumber($result_all_job_3['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_3['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_3['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_3['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_3['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_3['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >4. รับจ้างรายวัน</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >รับจ้างรายวัน</td>
+    <td align="center"><?php echo toNumber($result_all_job_4['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_4['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_4['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_4['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_4['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_4['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td >5. เกษตรกร</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >เกษตรกร</td>
+    <td align="center"><?php echo toNumber($result_all_job_5['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_5['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_5['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_5['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_5['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_5['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >6. รับราชการ/รัฐวิสาหกิจ/พนักงานราชการ</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >รับราชการ/รัฐวิสาหกิจ/พนักงานราชการ</td>
+    <td align="center"><?php echo toNumber($result_all_job_6['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_6['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_6['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_6['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_6['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_6['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td >7. ลูกจ้างประจำ/พนักงานบรัทห้างร้าน</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >ลูกจ้างประจำ/พนักงานบรัทห้างร้าน</td>
+    <td align="center"><?php echo toNumber($result_all_job_7['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_7['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_7['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_7['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_7['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_7['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >8. ว่างงาน</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >ว่างงาน</td>
+    <td align="center"><?php echo toNumber($result_all_job_8['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_8['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_8['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_8['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_8['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_8['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
-    <td >9. อื่น ๆ</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >อื่น ๆ</td>
+    <td align="center"><?php echo toNumber($result_all_job_9['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_9['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_9['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_9['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_9['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_9['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
-    <td >10. ไม่ยินดีให้ข้อมูล</td>
-    <td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
-	<td align="center"></td>
+    <td >ไม่ยินดีให้ข้อมูล</td>
+    <td align="center"><?php echo toNumber($result_all_job_10['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_job_10['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_job_10['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_job_10['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_job_10['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_10['count']/$result_done['count']*100) : '-'?></td>
   </tr>
 </table>
