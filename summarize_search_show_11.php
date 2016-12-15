@@ -215,57 +215,57 @@
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1. ทารกเสียชีวิตในครรภ์ &#40;Dead Fetus in Utero: DFIU&#41;</td>
     <td align="center"><?php echo toNumber($result_all_health_1['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_1['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_1['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2. ตั้งครรภ์ไข่ลม &#40;bligted ovum&#41;</td>
     <td align="center"><?php echo toNumber($result_all_health_2['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_2['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_2['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 3. ตั้งครรภ์เนื่องจากการคุมกำเนิดล้มเหลว</td>
     <td align="center"><?php echo toNumber($result_all_health_3['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_3['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_3['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4. ทารกในครรภ์ผิดปกติ</td>
     <td align="center"><?php echo toNumber($result_all_health_4['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_4['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_4['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4.1 ธาลัสซีเมีย</td>
     <td align="center"><?php echo toNumber($result_all_health_4_1['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_4_1['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_4_1['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4.2 หัดเยอรมัน</td>
     <td align="center"><?php echo toNumber($result_all_health_4_2['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_4_2['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_4_2['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4.3 โรคอื่น ๆ</td>
     <td align="center"><?php echo toNumber($result_all_health_4_3['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_4_3['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_4_3['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 5. การตั้งครรภ์อาจจะเป็นอันตรายต่อสุขภาพของมารดา</td>
     <td align="center"><?php echo toNumber($result_all_health_5['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_5['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_5['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 5.1 มารดาเป้นโรคหัวใจ</td>
     <td align="center"><?php echo toNumber($result_all_health_5_1['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_5_1['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_5_1['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 5.2 โรคอื่น ๆ</td>
     <td align="center"><?php echo toNumber($result_all_health_5_2['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_5_2['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_5_2['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 6. ไม่ยินดีให้ข้อมูล</td>
     <td align="center"><?php echo toNumber($result_all_health_6['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_health_6['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_health['count'] > 0 ? toDecimal($result_all_health_6['count']/$result_all_health['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#f19f9f" class="text_table">
     <td >2. ด้านเศรษฐกิจ</td>
@@ -275,22 +275,22 @@
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1. มีปัญหาเรื่องค่าใช้จ่ายในการเลี้ยงดูบุตร</td>
     <td align="center"><?php echo toNumber($result_all_money_1['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_money_1['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_money['count'] > 0 ? toDecimal($result_all_money_1['count']/$result_all_money['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2. การตั้งครรภ์เป็นอุปสรรคต่อการประกอบอาชีพ</td>
     <td align="center"><?php echo toNumber($result_all_money_2['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_money_2['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_money['count'] > 0 ? toDecimal($result_all_money_2['count']/$result_all_money['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 3. อื่น ๆ</td>
     <td align="center"><?php echo toNumber($result_all_money_3['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_money_3['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_money['count'] > 0 ? toDecimal($result_all_money_3['count']/$result_all_money['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4. ไม่ยินดีให้ข้อมูล</td>
     <td align="center"><?php echo toNumber($result_all_money_4['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_money_4['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_money['count'] > 0 ? toDecimal($result_all_money_4['count']/$result_all_money['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#f19f9f" class="text_table">
     <td >3. ด้านสังคมและครอบครัว</td>
@@ -300,61 +300,61 @@
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1. ตั้งครรภ์เนื่องจากถูกข่มขืน</td>
     <td align="center"><?php echo toNumber($result_all_family_1['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_1['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_1['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2. มีบุตรถี่เกินไป</td>
     <td align="center"><?php echo toNumber($result_all_family_2['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_2['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_2['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 3. บุตรพอแล้ว</td>
     <td align="center"><?php echo toNumber($result_all_family_3['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_3['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_3['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4. ยังเรียนไม่จบ</td>
     <td align="center"><?php echo toNumber($result_all_family_4['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_4['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_4['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 5. ยังไม่พร้อมจะแต่งงาน</td>
     <td align="center"><?php echo toNumber($result_all_family_5['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_5['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_5['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 6. ฝ่ายชายไม่รับผิดชอบ</td>
     <td align="center"><?php echo toNumber($result_all_family_6['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_6['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_6['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7. ฝ่ายชายมีครอบครัวแล้ว</td>
     <td align="center"><?php echo toNumber($result_all_family_7['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_7['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_7['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8. มีปัญหากับญาติของฝ่ายชาย</td>
     <td align="center"><?php echo toNumber($result_all_family_8['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_8['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_8['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9. ตั้งครรภ์กับชายอื่นที่ไม่ใช่สามีหรือเพื่อนชายประจำ</td>
     <td align="center"><?php echo toNumber($result_all_family_9['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_9['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_9['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 10. หย่าหรือเลิกกับสามีหรือเพื่อนชายภายหลังจากตั้งครรภ์นี้</td>
     <td align="center"><?php echo toNumber($result_all_family_10['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_10['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_10['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 11. ตั้งครรภ์กับบุคลาสืบสายเลือดเดียวกันหรือใกล้ชิดทางสายเลือด</td>
     <td align="center"><?php echo toNumber($result_all_family_11['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_11['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_11['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 12. ไม่ยินดีให้ข้อมูล</td>
     <td align="center"><?php echo toNumber($result_all_family_12['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_family_12['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_12['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
 </table>

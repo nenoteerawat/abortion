@@ -44,15 +44,15 @@
 		$survey_hospital = $_POST['survey_hospital'];
 		$search_query = $search_query." and survey_agency = '$survey_hospital'";
 	}
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query;
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and group_disposition != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_all = mysql_query($query);
 	$result_all = mysql_fetch_array($result_all);
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and group_disposition != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_self = mysql_query($query);
 	$result_self = mysql_fetch_array($result_self);
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and group_disposition != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_done = mysql_query($query);
 	$result_done = mysql_fetch_array($result_done);
@@ -82,6 +82,19 @@
 	$query = preg_replace("/and/","where",$query,1);
 	$result_done_disposition_2 = mysql_query($query);
 	$result_done_disposition_2 = mysql_fetch_array($result_done_disposition_2);
+	
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and group_disposition = 3";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_all_disposition_3 = mysql_query($query);
+	$result_all_disposition_3 = mysql_fetch_array($result_all_disposition_3);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1  and group_disposition = 3";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_self_disposition_3 = mysql_query($query);
+	$result_self_disposition_3 = mysql_fetch_array($result_self_disposition_3);
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2  and group_disposition = 3";
+	$query = preg_replace("/and/","where",$query,1);
+	$result_done_disposition_3 = mysql_query($query);
+	$result_done_disposition_3 = mysql_fetch_array($result_done_disposition_3);
 	
 	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and group_disposition = 4";
 	$query = preg_replace("/and/","where",$query,1);
@@ -138,6 +151,15 @@
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_disposition_2['count']/$result_done['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
+    <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp เสียชีวิต</td>
+    <td align="center"><?php echo toNumber($result_all_disposition_3['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_disposition_3['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_disposition_3['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_disposition_3['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_disposition_3['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_disposition_3['count']/$result_done['count']*100) : '-'?></td>
+  </tr>
+  <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp อื่น ๆ</td>
     <td align="center"><?php echo toNumber($result_all_disposition_4['count'])?></td>
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_disposition_4['count']/$result_all['count']*100) : '-'?></td>

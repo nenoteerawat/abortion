@@ -44,15 +44,15 @@
 		$survey_hospital = $_POST['survey_hospital'];
 		$search_query = $search_query." and survey_agency = '$survey_hospital'";
 	}
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query;
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and check_group_complications != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_all = mysql_query($query);
 	$result_all = mysql_fetch_array($result_all);
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1  and check_group_complications != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_self = mysql_query($query);
 	$result_self = mysql_fetch_array($result_self);
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2  and check_group_complications != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_done = mysql_query($query);
 	$result_done = mysql_fetch_array($result_done);
@@ -296,118 +296,118 @@
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ตกเลือดมากจนต้องให้เลือด</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_1['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_1['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_1['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_1['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_1['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_1['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_1['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_1['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_1['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ช็อกจากการเสียเลือด</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_2['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_2['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_2['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_2['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_2['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_2['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_2['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_2['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_2['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ติดเชื้อบาดทะยัก</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_3['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_3['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_3['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_3['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_3['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_3['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_3['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_3['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_3['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ติดเชื้อในกระแสเลือด</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_4['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_4['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_4['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_4['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_4['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_4['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_4['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_4['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_4['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ช็อกจากการติดเชื้อ</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_5['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_5['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_5['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_5['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_5['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_5['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_5['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_5['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_5['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ปากมดลูกฉีกขาด</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_6['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_6['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_6['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_6['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_6['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_6['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_6['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_6['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_6['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp มดลูกทะลุ</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_7['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_7['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_7['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_7['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_7['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_7['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_7['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_7['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_7['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ลำไส้ฉีกขาดหรือทะลุ</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_8['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_8['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_8['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_8['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_8['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_8['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_8['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_8['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_8['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp อุ้งเชิงกรานอักเสบ</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_9['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_9['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_9['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_9['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_9['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_9['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_9['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_9['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_9['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp เยื่อบุผนังช่องท้องอักเสบ</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_10['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_10['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_10['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_10['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_10['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_10['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_10['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_10['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_10['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ไตวาย</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_11['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_11['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_11['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_11['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_11['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_11['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_11['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_11['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_11['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#B4DCED" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp หัวใจวาย</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_12['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_12['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_12['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_12['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_12['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_12['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_12['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_12['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_12['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
   <tr bgcolor="#ffffff" class="text_table">
     <td >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ตัดมดลูก</td>
     <td align="center"><?php echo toNumber($result_all_complication_ever_13['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_complication_ever_13['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_all_complication_ever['count'] > 0 ? toDecimal($result_all_complication_ever_13['count']/$result_all_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_self_complication_ever_13['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_complication_ever_13['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_self_complication_ever['count'] > 0 ? toDecimal($result_self_complication_ever_13['count']/$result_self_complication_ever['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_complication_ever_13['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_complication_ever_13['count']/$result_done['count']*100) : '-'?></td>
+	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_13['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
 </table>
