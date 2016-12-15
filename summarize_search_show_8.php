@@ -320,15 +320,6 @@
 	<td align="center"><?php echo toNumber($result_done_miscarriage_ever_3['count'])?></td>
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_miscarriage_ever_3['count']/$result_done['count']*100) : '-'?></td>
   </tr>
-  <tr bgcolor="#B4DCED" class="text_table">
-    <td >&nbsp&nbsp&ndash;&nbspไม่ยินดีให้ข้อมูล</td>
-    <td align="center"><?php echo toNumber($result_all_notinfo['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_notinfo['count']/$result_all['count']*100) : '-'?></td>
-	<td align="center"><?php echo toNumber($result_self_notinfo['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_notinfo['count']/$result_self['count']*100) : '-'?></td>
-	<td align="center"><?php echo toNumber($result_done_notinfo['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_notinfo['count']/$result_done['count']*100) : '-'?></td>
-  </tr>
   <tr bgcolor="#f19f9f" class="text_table">
     <td >ประวัติทำแท้ง &#40;ครั้ง&#41;</td>
     <td colspan="2" align="center">n = <?php echo toNumber($result_all['count'])?></td>
@@ -380,15 +371,6 @@
 	<td align="center"><?php echo toNumber($result_done_abortion_ever_3['count'])?></td>
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_abortion_ever_3['count']/$result_done['count']*100) : '-'?></td>
   </tr>
-  <tr bgcolor="#B4DCED" class="text_table">
-    <td >&nbsp&nbsp&ndash;&nbspไม่ยินดีให้ข้อมูล</td>
-    <td align="center"><?php echo toNumber($result_all_notinfo['count'])?></td>
-	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_notinfo['count']/$result_all['count']*100) : '-'?></td>
-	<td align="center"><?php echo toNumber($result_self_notinfo['count'])?></td>
-	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_notinfo['count']/$result_self['count']*100) : '-'?></td>
-	<td align="center"><?php echo toNumber($result_done_notinfo['count'])?></td>
-	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_notinfo['count']/$result_done['count']*100) : '-'?></td>
-  </tr>
   <tr bgcolor="#f19f9f" class="text_table">
     <td >ไม่ทราบว่าแท้งแบบไหน &#40;ครั้ง&#41;</td>
     <td colspan="2" align="center">n = <?php echo toNumber($result_all['count'])?></td>
@@ -421,5 +403,20 @@
 	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_unknown_3['count']/$result_self['count']*100) : '-'?></td>
 	<td align="center"><?php echo toNumber($result_done_unknown_3['count'])?></td>
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_unknown_3['count']/$result_done['count']*100) : '-'?></td>
+  </tr>
+  <tr bgcolor="#f19f9f" class="text_table">
+    <td >ไม่ยินดีให้ข้อมูล</td>
+    <td colspan="2" align="center">n = <?php echo toNumber($result_all['count'])?></td>
+	<td colspan="2" align="center">n = <?php echo toNumber($result_self['count'])?></td>
+	<td colspan="2" align="center">n = <?php echo toNumber($result_done['count'])?></td>
+  </tr>
+  <tr bgcolor="#B4DCED" class="text_table">
+    <td >&nbsp&nbsp&ndash;&nbspไม่ยินดีให้ข้อมูล</td>
+    <td align="center"><?php echo toNumber($result_all_notinfo['count'])?></td>
+	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_notinfo['count']/$result_all['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_self_notinfo['count'])?></td>
+	<td align="center"><?php echo $result_self['count'] > 0 ? toDecimal($result_self_notinfo['count']/$result_self['count']*100) : '-'?></td>
+	<td align="center"><?php echo toNumber($result_done_notinfo['count'])?></td>
+	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_notinfo['count']/$result_done['count']*100) : '-'?></td>
   </tr>
 </table>

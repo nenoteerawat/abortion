@@ -44,11 +44,11 @@
 		$survey_hospital = $_POST['survey_hospital'];
 		$search_query = $search_query." and survey_agency = '$survey_hospital'";
 	}
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query;
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_all = mysql_query($query);
 	$result_all = mysql_fetch_array($result_all);
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 < 5";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and ga2 < 5 and ga2 != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_all_5 = mysql_query($query);
 	$result_all_5 = mysql_fetch_array($result_all_5);
@@ -78,11 +78,11 @@
 	$result_all_29 = mysql_fetch_array($result_all_29);
 	
 	
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1 and ga2 != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_self = mysql_query($query);
 	$result_self = mysql_fetch_array($result_self);
-	$result_self_5 = mysql_query($query." and ga2 < 5");
+	$result_self_5 = mysql_query($query." and ga2 < 5 and ga2 != 0");
 	$result_self_5 = mysql_fetch_array($result_self_5);
 	$result_self_5_8 = mysql_query($query." and ga2 >= 5 and ga2 <= 8");
 	$result_self_5_8 = mysql_fetch_array($result_self_5_8);
@@ -97,11 +97,11 @@
 	$result_self_29 = mysql_query($query." and ga2 >= 29");
 	$result_self_29 = mysql_fetch_array($result_self_29);
 	
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2 and ga2 != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_done = mysql_query($query);
 	$result_done = mysql_fetch_array($result_done);
-	$result_done_5 = mysql_query($query." and ga2 < 5");
+	$result_done_5 = mysql_query($query." and ga2 < 5 and ga2 != 0");
 	$result_done_5 = mysql_fetch_array($result_done_5);
 	$result_done_5_8 = mysql_query($query." and ga2 >= 5 and ga2 <= 8");
 	$result_done_5_8 = mysql_fetch_array($result_done_5_8);

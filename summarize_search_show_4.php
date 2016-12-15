@@ -44,15 +44,15 @@
 		$survey_hospital = $_POST['survey_hospital'];
 		$search_query = $search_query." and survey_agency = '$survey_hospital'";
 	}
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query;
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and education != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_all = mysql_query($query);
 	$result_all = mysql_fetch_array($result_all);
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 1  and education != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_self = mysql_query($query);
 	$result_self = mysql_fetch_array($result_self);
-	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2";
+	$query = "select count(*) as count from abortionsurvey_main_2559".$search_query." and cause_abortion = 2  and education != 0";
 	$query = preg_replace("/and/","where",$query,1);
 	$result_done = mysql_query($query);
 	$result_done = mysql_fetch_array($result_done);
