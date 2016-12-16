@@ -129,7 +129,7 @@ a:hover{
 <div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">
-  <h3>Username : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">Logout</a></h3></div>
+  <h3>ยินดีต้อนรับ : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">ออกจากระบบ</a></h3></div>
   
 <div class="head_sum">จำนวนและร้อยละผู้ป่วยแท้งและทำแท้ง จำแนกตาม</div>
 <div class="broder_set" align="center" style="width:804px" >

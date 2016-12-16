@@ -2368,7 +2368,7 @@ function check_submit()
 <div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">
-  <h3>Username : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">Logout</a></h3></div>
+  <h3>ยินดีต้อนรับ : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">ออกจากระบบ</a></h3></div>
 <div id="tabs" style="width:900px" >
   <ul>
     <li><a href="#tabs-1">ส่วนที่ 1</a></li>

@@ -96,7 +96,7 @@ function data_show_seacrh(){
 <div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">
-  <h3>Username : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">Logout</a></h3></div>
+  <h3>ยินดีต้อนรับ : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">ออกจากระบบ</a></h3></div>
  
 <form id="form1" name="form1" method="post" action="">
     <table width="100%" border="0" cellspacing="3" cellpadding="2"  bgcolor="#3399CC">

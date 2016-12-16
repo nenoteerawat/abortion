@@ -2357,7 +2357,7 @@ function check_submit()
 <div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">
-  <h3>Username : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">Logout</a></h3></div>
+  <h3>ยินดีต้อนรับ : <?php echo $_SESSION["ss_name"]; ?> : <a href="logout.php">ออกจากระบบ</a></h3></div>
  
 <?php 
 	if($_SESSION["ss_lavel"] != 3 && $_SESSION["ss_lavel"] != 4 )
