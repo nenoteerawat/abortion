@@ -2,7 +2,11 @@
 * {
 /*    margin: 0 auto;
     padding: 0;*/
-
+@font-face {
+  font-family: supermarket;
+  src: url(./font/supermarket.ttf) format("truetype");
+}
+*{ font-family: supermarket, sans-serif}
 }
 .container {
     margin: 0 auto;
@@ -44,8 +48,7 @@
   
     color: #808080;
     display: block;
-    font-family: 'Lucida Console';
-    font-size: 20px;
+    font-size: 25px;
     line-height: 54px;
     padding: 0 20px;
     text-decoration: none;
