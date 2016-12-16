@@ -9,7 +9,7 @@
 ?>
 	<select name="survey_hospital" id="survey_hospital" onchange="data_show_seacrh()" >
 
-		<option value="">----- Select -----</option>
+		<option value="">----- เลือก -----</option>
 		
 <?php
 while($hospital_province = mysql_fetch_array($result))

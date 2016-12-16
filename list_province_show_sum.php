@@ -30,7 +30,7 @@
 ?>
 	<select name="survey_province" id="survey_province" onchange="data_show_seacrh()" >
 
-		<option value="">----- Select -----</option>
+		<option value="">----- เลือก -----</option>
 		
 <?php
 while($hospital_province = mysql_fetch_array($result))

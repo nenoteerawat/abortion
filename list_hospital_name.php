@@ -8,7 +8,7 @@
 ?>
 	<select name="survey_agency" id="survey_agency" onchange="select_other_hospitol()" >
 
-		<option value="">----- Select -----</option>
+		<option value="">----- เลือก -----</option>
 		
 <?php
 while($hospital_name = mysql_fetch_array($result))

@@ -72,7 +72,7 @@ if(!empty($_POST['h_submit']))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <META NAME="AUTHOR" CONTENT="sinpong kaewsom">
 <META NAME="KEYWORDS" CONTENT="ศิลป์พงษ์ แก้วสม sinpong kaewsom">
-<title>Abortion</title>
+<title>การเฝ้าระวังการแท้งประเทศไทย</title>
 
   	<link rel="stylesheet" href="css/style_site.css">
 
@@ -87,7 +87,7 @@ if(!empty($_POST['h_submit']))
 
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="2">
   <tr>
-    <td width="144"><h3>Login</h3></td>
+    <td width="144"><h3>ลงชื่อเข้าใช้งานระบบ</h3></td>
     <td width="338"><?php 
 if(!empty($h_submit))
 	{
@@ -108,13 +108,13 @@ if(!empty($h_submit))
 		  ?></td>
   </tr>
   <tr>
-    <td class="menu_right"><h4>Username : </h4></td>
+    <td class="menu_right"><h4>ชื่อผู้ใช้ : </h4></td>
     <td><label>
       <input type="text" name="username" id="username" />
       <font color="#FF0000">*</font></label></td>
   </tr>
   <tr>
-    <td class="menu_right"><h4>Password : </h4></td>
+    <td class="menu_right"><h4>รหัสผ่าน : </h4></td>
     <td><label>
       <input type="password" name="password" id="password" />
       <font color="#FF0000">*</font></label></td>
@@ -122,7 +122,7 @@ if(!empty($h_submit))
   <tr>
     <td colspan="2"><div align="center">
       <label>
-      <input type="submit" name="button" id="button" value="Login" />
+      <input type="submit" name="button" id="button" value="เข้าสู่ระบบ" />
     </label>
       <input name="h_submit" type="hidden" id="h_submit" value="1" />
     </div></td>
