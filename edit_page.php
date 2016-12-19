@@ -2492,7 +2492,7 @@ function check_submit()
     <td  valign="top" class="menu_right">&nbsp;</td>
     <td colspan="2"  valign="top"  class="label_h">1. อายุของท่าน <label>
       <input name="age" type="text"  id="age" onkeypress="return handleEnter(this, event)" onkeyup="check_int('age')" value="<?php echo $data_hospital['age']; ?>" size="3" maxlength="2"/>
-      ปี (อายุเต็ม ไม่ระบุ = 99) </label></td>
+      ปี (อายุเต็ม ถ้าไม่ระบุให้ใส่หมายเลข = 99) </label></td>
     <td width="35%">&nbsp;</td>
     </tr>
   <tr>
@@ -2501,14 +2501,14 @@ function check_submit()
     <td colspan="2" valign="top"  class="label_h">2. อายุของสามีหรือเพื่อนชาย
       <label>
       <input name="text_friend_age" type="text"  onkeyup="other_name111('text_friend_age1','friend_age_')"  id="text_friend_age1" size="3" maxlength="2"  onkeypress="return handleEnter(this, event)" value="<?php echo $data_hospital['text_friend_age']; ?>" /> 
-      ปี  </label></td>
+      ปี (อายุเต็ม) </label></td>
     </tr>
         <tr>
     <td width="6%"></td>
     
     <td colspan="2" valign="top"  class="label_h">
       <label>
-     (อายุเต็ม ไม่ทราบ = 98, ไม่ระบุ = 99) </label></td>
+      ไม่ทราบ = 98, ไม่ระบุ = 99 </label></td>
     </tr>
     <!--
   <tr>
@@ -2580,7 +2580,7 @@ function check_submit()
     <td>      <label>
         <input type="radio" name="nationality" value="5" id="nationality_4" onclick="other_name('text_nationality','other')"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['nationality']==5){ ?> checked="checked"  <?php } ?> />
         อื่นๆ</label>
-      ระบุ 
+      โปรดระบุ 
       <label>
         <input name="text_nationality" type="text" <?php if($data_hospital['nationality']!=5){ ?> disabled="disabled" <?php }?> class="validate[condRequired[nationality_1]]" id="text_nationality" maxlength="50" onkeypress="return handleEnter(this, event)" value="<?php echo $data_hospital['text_nationality']; ?>"/>
       </label></td>
@@ -2633,7 +2633,7 @@ function check_submit()
     <td>      <label>
         <input type="radio" name="religion" value="4" id="religion_3" onclick="other_name('text_religion','other')"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['religion']==4){ ?> checked="checked"  <?php } ?> />
 </label>
-        อื่น ๆ ระบุ<label>
+        อื่น ๆ โปรดระบุ<label>
         <input name="text_religion" type="text"  <?php if($data_hospital['religion']!=4){ ?> disabled="disabled" <?php }?>  class="validate[condRequired[religion_3]]" id="text_religion" maxlength="50" onkeypress="return handleEnter(this, event)" value="<?php echo $data_hospital['text_religion']; ?>"/>
     </label></td>
     <td>&nbsp;</td>
@@ -2704,7 +2704,7 @@ function check_submit()
     <td>&nbsp;</td>
     <td colspan="2"><label>
       <input type="radio" name="job" value="1" id="job_0" onclick="other_name2('text_job1','','other')"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['job']==1){ ?> checked="checked"  <?php } ?> />
-      1. กำลังศึกษา (ระบุระดับชั้นที่กำลังศึกษา) 
+      1. กำลังศึกษา (โปรดระบุระดับชั้นที่กำลังศึกษา) 
       <input name="text_job1" type="text" <?php if($data_hospital['job']!=1){ ?> disabled="disabled" <?php }?> class="validate[condRequired[job_0]]" id="text_job1" maxlength="50"  onkeypress="return handleEnter(this, event)" value="<?php echo $data_hospital['text_job1']; ?>" />
     </label></td>
     </tr>
@@ -2865,7 +2865,7 @@ function check_submit()
     <td>      <label>
         <input type="radio" name="education" value="10" id="education_9" onclick="other_name('text_education','other')"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['education']==10){ ?> checked="checked"  <?php } ?> />
 
-        10. อื่นๆ ระบุ 
+        10. อื่นๆ โปรดระบุ 
         <input name="text_education" type="text" <?php if($data_hospital['education']!=10){ ?> disabled="disabled" <?php }?> class="validate[condRequired[education_9]]" id="text_education" maxlength="50" onkeypress="return handleEnter(this, event)" value="<?php echo $data_hospital['text_education']; ?>" />
     </label></td>
     <td>&nbsp;</td>
@@ -3195,7 +3195,7 @@ function check_submit()
     <td>
       <label>
         <input type="radio" name="plan_pregnant" value="1" id="plan_pregnant_0"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['plan_pregnant']==1){ ?> checked="checked"  <?php } ?> />
-        1. ตั้งใจ</label>
+        1. ตั้งใจ (ถ้าตอบตั้งใจไม่ต้องตอบข้อ 14. ให้ข้ามไปตอบข้อ 15.)</label>
     </td>
     <td>&nbsp;</td>
   </tr>
@@ -3217,7 +3217,7 @@ function check_submit()
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td colspan="2" class="label_h">14.  การตั้งครรภ์ครั้งนี้ ได้ใช้วิธีการคุมกำเนิดใดๆ หรือไม่</td>
+    <td colspan="2" class="label_h">14.  การตั้งครรภ์ครั้งนี้ ได้ใช้วิธีการคุมกำเนิดใดๆ หรือไม่ (เลือกตอบได้เพียงข้อเดียว)</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -3226,7 +3226,7 @@ function check_submit()
     <td colspan="2">
       <label>
         <input type="radio" name="contraception" value="1" id="contraception_0"  onclick="other_name103('contraception_0','text_contraception','not_contraception','use_contraception',11,15,1)"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['contraception']==1){ ?> checked="checked"  <?php } ?> />
-        1. ไม่ได้ใช้การคุมกำเนิดวิธีใด   ระบุเหตุผล</label></td>
+        1. ไม่ได้ใช้การคุมกำเนิดวิธีใด </label></td>
     </tr>
     <tr>
     <td>&nbsp;</td>
@@ -3451,7 +3451,7 @@ function check_submit()
   
   <tr>
     <td>&nbsp;</td>
-    <td colspan="3" class="label_h">16. เหตุผลที่ทำให้ท่านต้องทำแท้งครั้งนี้ (ตอบได้มากกว่า 1 ข้อ)</td>
+    <td colspan="3" class="label_h">16. เหตุผลที่ทำให้ท่านต้องทำแท้งครั้งนี้ (ถ้าตอบเหตุผลด้านสุขภาพไม่ต้องตอบเหตุผลด้านเศรษฐกิจ สังคม/ครอบครัว แต่ถ้าตอบเหตุผลด้านเศรษฐกิจ สามารถตอบเหตุผลด้าน สังคม/ครอบครัวได้)</td>
     </tr>
     <tr>
     <td>&nbsp;</td>
@@ -3938,9 +3938,21 @@ function check_submit()
       <input name="text_group_effect" type="text" class="validate[condRequired[group_effect_10]]" id="text_group_effect" size="30" maxlength="100" onkeypress="return handleEnter(this, event)" <?php if($data_hospital['group_effect11']!=1){ ?> disabled="disabled"  <?php }?> value="<?php echo $data_hospital['text_group_effect']; ?>"/>
     </label></td>
     </tr>
+</table>
+<!--    <div align="center"><label><button class="next-product">ต่อไป</button></label></div>-->
+  </div>
+  <div id="tabs-4">
+<table width="100%" border="0" cellspacing="2" cellpadding="5">
   <tr>
-    <td>&nbsp;</td>
-    <td colspan="2" class="label_h">18. การทำแท้งครั้งนี้ใครเป็นผู้ทำแท้งให้ และทำด้วยวิธีการใด (ตอบได้มากกว่า 1 ข้อ)</td>
+    <td colspan="3"  valign="top" class="menu_left"><strong>ข้อมูลจากแฟ้มประวัติของอาสาสมัคร</strong></td>
+    <td width="37%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="2"  valign="top" class="menu_right">&nbsp;</td>
+    <td colspan="3"  valign="top"  class="label_h">คำถามข้อ 19-22 เจ้าหน้าที่เก็บข้อมูลหาข้อมูลประกอบจากแฟ้มประวัติของอาสาสมัคร</td>
+    </tr>
+  <tr>
+    <td colspan="2" class="label_h">18. การทำแท้งครั้งนี้ใครเป็นผู้ทำแท้งให้ และทำด้วยวิธีการใด (ตอบได้เพียง 1 ข้อ)</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -4459,20 +4471,8 @@ function check_submit()
       <input type="checkbox"  name="abortion18_511" value="1" id="abortion18_510"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['abortionbyunknow1']!=1){ ?> disabled="disabled"  <?php } if($data_hospital['abortion18_511']==1) {?> checked="checked"  <?php } ?> />
       11. ไม่ทราบ</label></td>
     </tr>
-</table>
-<!--    <div align="center"><label><button class="next-product">ต่อไป</button></label></div>-->
-  </div>
-  <div id="tabs-4">
-<table width="100%" border="0" cellspacing="2" cellpadding="5">
   <tr>
-    <td colspan="3"  valign="top" class="menu_left"><strong>ข้อมูลจากแฟ้มประวัติของอาสาสมัคร</strong></td>
-    <td width="37%">&nbsp;</td>
-  </tr>
-  <tr>
-    <td rowspan="2"  valign="top" class="menu_right">&nbsp;</td>
-    <td colspan="3"  valign="top"  class="label_h">คำถามข้อ 19-22 เจ้าหน้าที่เก็บข้อมูลหาข้อมูลประกอบจากแฟ้มประวัติของอาสาสมัคร</td>
-    </tr>
-  <tr>
+	<td valign="top" class="menu_right">&nbsp;</td>
     <td colspan="3"  valign="top"  class="label_h">19. อายุครรภ์ครั้งนี้
         <input name="ga2" type="text" id="ga2" size="3" maxlength="2"  onkeypress="return handleEnter(this, event)"  onblur="check_large('1','42','ga2');" value="<?php echo $data_hospital['ga2']; ?>" />
     
@@ -4673,7 +4673,7 @@ function check_submit()
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label>
-        <input type="checkbox" name="organ8" value="1" id="organ8"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['group_complications3']!=1){ ?> disabled="disabled"  <?php } if($data_hospital[organ8]==1) {?> checked="checked"  <?php } ?> />
+        <input type="checkbox" name="organ8" value="1" id="organ8"  onkeypress="return handleEnter(this, event)" <?php if($data_hospital['group_complications3']!=1){ ?> disabled="disabled"  <?php } if($data_hospital['organ8']==1) {?> checked="checked"  <?php } ?> />
         8. ตัดมดลูก</label></td>
     <td>&nbsp;</td>
   </tr>

@@ -2498,7 +2498,7 @@ function check_submit()
     <td  valign="top" class="menu_right">&nbsp;</td>
     <td colspan="2"  valign="top"  class="label_h">1. อายุของท่าน <label>
       <input name="age" type="text"  id="age" size="3" maxlength="2" onkeyup="check_int('age')" onkeypress="return handleEnter(this, event)"/>
-      ปี (อายุเต็ม ไม่ระบุ = 99)</label></td>
+      ปี (อายุเต็ม ถ้าไม่ระบุให้ใส่หมายเลข = 99)</label></td>
     <td width="35%">&nbsp;</td>
     </tr>
   <tr>
@@ -2507,14 +2507,14 @@ function check_submit()
     <td colspan="2" valign="top"  class="label_h">2. อายุของสามีหรือเพื่อนชาย
       <label>
       <input name="text_friend_age"  type="text"  onkeyup="other_name111('text_friend_age1','friend_age_')" id="text_friend_age1" size="3" maxlength="2"  onkeypress="return handleEnter(this, event)" />
-      ปี </label></td>
+      ปี (อายุเต็ม) </label></td>
     </tr>
     <tr>
     <td width="6%"></td>
     
     <td colspan="2" valign="top"  class="label_h">
       <label>
-     (อายุเต็ม ไม่ทราบ = 98, ไม่ระบุ = 99) </label></td>
+     ไม่ทราบ = 98, ไม่ระบุ = 99</label></td>
     </tr>
   
   <!--
@@ -2590,7 +2590,7 @@ function check_submit()
     <td>      <label>
         <input type="radio" name="nationality" value="5" id="nationality_4" onclick="other_name('text_nationality','other')"  onkeypress="return handleEnter(this, event)" />
         อื่นๆ</label>
-      ระบุ 
+      โปรดระบุ 
       <label>
         <input name="text_nationality" type="text" disabled="disabled" class="validate[condRequired[nationality_4]]" id="text_nationality" maxlength="50" onkeypress="return handleEnter(this, event)" />
       </label></td>
@@ -2643,7 +2643,7 @@ function check_submit()
     <td>      <label>
         <input type="radio" name="religion" value="4" id="religion_3" onclick="other_name('text_religion','other')"  onkeypress="return handleEnter(this, event)" />
 </label>
-        อื่น ๆ ระบุ<label>
+        อื่น ๆ โปรดระบุ<label>
         <input name="text_religion" type="text" disabled="disabled" class="validate[condRequired[religion_3]]" id="text_religion" maxlength="50" onkeypress="return handleEnter(this, event)" />
     </label></td>
     <td>&nbsp;</td>
@@ -2713,7 +2713,7 @@ function check_submit()
     <td>&nbsp;</td>
     <td colspan="2"><label>
       <input type="radio" name="job" value="1" id="job_0" onclick="other_name2('text_job1','','other')"  onkeypress="return handleEnter(this, event)" />
-      1. กำลังศึกษา (ระบุระดับชั้นที่กำลังศึกษา) 
+      1. กำลังศึกษา (โปรดระบุระดับชั้นที่กำลังศึกษา) 
       <input name="text_job1" type="text" disabled="disabled" class="validate[condRequired[job_0]]" id="text_job1" maxlength="50"  onkeypress="return handleEnter(this, event)" />
     </label></td>
     </tr>
@@ -2874,7 +2874,7 @@ function check_submit()
     <td>      <label>
         <input type="radio" name="education" value="10" id="education_9" onclick="other_name('text_education','other')"  onkeypress="return handleEnter(this, event)" />
 
-        10. อื่นๆ ระบุ 
+        10. อื่นๆ โปรดระบุ 
         <input name="text_education" type="text" disabled="disabled" class="validate[condRequired[education_9]]" id="text_education" maxlength="50" onkeypress="return handleEnter(this, event)" />
     </label></td>
     <td>&nbsp;</td>
@@ -3200,7 +3200,7 @@ function check_submit()
     <td>
       <label>
         <input type="radio" name="plan_pregnant" value="1" id="plan_pregnant_0"  onkeypress="return handleEnter(this, event)" />
-        1. ตั้งใจ</label>
+        1. ตั้งใจ (ถ้าตอบตั้งใจไม่ต้องตอบข้อ 14. ให้ข้ามไปตอบข้อ 15.)</label>
     </td>
     <td>&nbsp;</td>
   </tr>
@@ -3222,7 +3222,7 @@ function check_submit()
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td colspan="2" class="label_h">14.  การตั้งครรภ์ครั้งนี้ ได้ใช้วิธีการคุมกำเนิดใดๆ หรือไม่</td>
+    <td colspan="2" class="label_h">14.  การตั้งครรภ์ครั้งนี้ ได้ใช้วิธีการคุมกำเนิดใดๆ หรือไม่ (เลือกตอบได้เพียงข้อเดียว)</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -3231,7 +3231,7 @@ function check_submit()
     <td colspan="2">
       <label>
         <input type="radio" name="contraception" value="1" id="contraception_0"  onclick="other_name103('contraception_0','text_contraception','not_contraception','use_contraception',11,15,1)"  onkeypress="return handleEnter(this, event)" />
-        1. ไม่ได้ใช้การคุมกำเนิดวิธีใด   ระบุเหตุผล</label></td>
+        1. ไม่ได้ใช้การคุมกำเนิดวิธีใด </label></td>
     </tr>
     <tr>
     <td>&nbsp;</td>
@@ -3449,7 +3449,7 @@ function check_submit()
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td colspan="3" class="label_h">16. เหตุผลที่ทำให้ท่านต้องทำแท้งครั้งนี้ (ตอบได้มากกว่า 1 ข้อ)</td>
+    <td colspan="3" class="label_h">16. เหตุผลที่ทำให้ท่านต้องทำแท้งครั้งนี้ (ถ้าตอบเหตุผลด้านสุขภาพไม่ต้องตอบเหตุผลด้านเศรษฐกิจ สังคม/ครอบครัว แต่ถ้าตอบเหตุผลด้านเศรษฐกิจ สามารถตอบเหตุผลด้าน สังคม/ครอบครัวได้)</td>
     </tr>
     <tr>
     <td>&nbsp;</td>
@@ -3933,10 +3933,193 @@ function check_submit()
       <input name="text_group_effect" type="text" disabled="disabled" class="validate[condRequired[group_effect_10]]" id="text_group_effect" size="30" maxlength="100" onkeypress="return handleEnter(this, event)" />
     </label></td>
     </tr>
+
+    
+  
+   <!-- 
   <tr>
     <td>&nbsp;</td>
-    <td colspan="2" class="label_h">18. การทำแท้งครั้งนี้ใครเป็นผู้ทำแท้งให้ และทำด้วยวิธีการใด (ตอบได้มากกว่า 1 ข้อ)</td>
+    <td colspan="2" class="label_h">18. อาชีพของผู้ทำแท้งในครั้งนี้ </td>
     <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+      <label>
+        <input type="radio" name="abortion_personal" value="1" id="abortion_personal_0" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
+        1. แพทย์</label>
+      </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="radio" name="abortion_personal" value="2" id="abortion_personal_1" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
+        2. พยาบาล</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="radio" name="abortion_personal" value="3" id="abortion_personal_2" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
+        3. ผู้ช่วยพยาบาล/ เจ้าหน้าที่สาธารณสุข</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">      <label>
+      <input type="radio" name="abortion_personal" value="4" id="abortion_personal_3" onclick="other_name('text_abortion_personal','other')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
+      4. ไม่ใช่บุคลากรทางการแพทย์ ระบุ 
+      <input name="text_abortion_personal" type="text" class="validate[condRequired[abortion_personal_3]]" id="text_abortion_personal" size="30" maxlength="100"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
+    </label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="radio" name="abortion_personal" value="5" id="abortion_personal_4" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
+        5. ไม่ทราบ</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" class="label_h">19. วิธีการทำแท้ง (ตอบได้มากกว่า 1 ข้อ)</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+      <label>
+        <input type="checkbox" disabled="disabled"  name="abortion_method1" value="1" id="abortion_method_0"  onkeypress="return handleEnter(this, event)" />
+        1. ใช้เครื่องสุญญากาศดูดออกทางช่องคลอด</label>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="checkbox" disabled="disabled"  name="abortion_method2" value="1" id="abortion_method_1"  onkeypress="return handleEnter(this, event)" />
+        2. ใช้เครื่องมือขูดออกทางช่องคลอด</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="checkbox" disabled="disabled"  name="abortion_method3" value="1" id="abortion_method_2"  onkeypress="return handleEnter(this, event)" />
+        3. รับประทานยาเม็ด</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="checkbox" disabled="disabled"  name="abortion_method4" value="1" id="abortion_method_3"  onkeypress="return handleEnter(this, event)" />
+        4. เหน็บยาเข้าทางช่องคลอด</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">      <label>
+      <input type="checkbox" disabled="disabled"  name="abortion_method5" value="1" id="abortion_method_4"  onkeypress="return handleEnter(this, event)" />
+      5. ใส่สายยางและ/หรือฉีดสารใด ๆ เข้าทางช่องคลอด </label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">      <label>
+      <input type="checkbox" disabled="disabled"  name="abortion_method6" value="1" id="abortion_method_5"  onkeypress="return handleEnter(this, event)" />
+      6. ใช้อุปกรณ์ของแข็งสอดและ/หรือ กระทุ้งเข้าทางช่องคลอด</label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="checkbox" disabled="disabled"  name="abortion_method7" value="1" id="abortion_method_6"  onkeypress="return handleEnter(this, event)" />
+        7. บีบ นวด เค้นบริเวณหน้าท้อง</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">      <label>
+      <input type="checkbox" disabled="disabled"  name="abortion_method8" value="1" id="abortion_method_7" onclick="other_name4('abortion_method_7','text_abortion_method1')" onkeypress="return handleEnter(this, event)" />
+      8. จงใจให้เกิดอุบัติเหตุโดยวิธีใดวิธีหนึ่ง ระบุ 
+      <input name="text_abortion_method1" type="text" disabled="disabled" class="validate[condRequired[abortion_method_7]]" id="text_abortion_method1" size="30" maxlength="100" onkeypress="return handleEnter(this, event)" />
+    </label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">      <label>
+      <input type="checkbox" disabled="disabled"  name="abortion_method9" value="1" id="abortion_method_8" onclick="other_name4('abortion_method_8','text_abortion_method2')" onkeypress="return handleEnter(this, event)" />
+      9. อื่นๆ ระบุ 
+      <input name="text_abortion_method2" type="text" disabled="disabled" class="validate[condRequired[abortion_method_8]]" id="text_abortion_method2" size="30" maxlength="100" onkeypress="return handleEnter(this, event)" />
+    </label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>      <label>
+        <input type="checkbox" disabled="disabled"  name="abortion_method10" value="1" id="abortion_method_9"  onkeypress="return handleEnter(this, event)" onclick="other_name14()"/>
+        10. ไม่ทราบ</label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2"><label>
+      <input type="checkbox" disabled="disabled"  name="abortion_method11" value="1" id="abortion_method_10" onclick="other_name7()" onkeypress="return handleEnter(this, event)"  />
+      11. โรงพยาบาลที่เข้าร่วมโครงการยุติการตั้งครรภ์ด้วยยาในระบบบริการสุขภาพ</label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
+          <input type="radio" name="select_abortion_method" value="1" id="select_abortion_method_0" disabled="disabled" />
+          1. มิฟิพริสโตน</label>
+      </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
+          <input type="radio" name="select_abortion_method" value="2" id="select_abortion_method_1" disabled="disabled" />
+          2. ไมโซพรอสตอล</label></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
+          <input type="radio" name="select_abortion_method" value="3" id="select_abortion_method_2" disabled="disabled" />
+          3. มิฟิพริสโตน และไมโซพรอสตอล</label></td>
+  </tr>
+  -->
+  
+</table>
+<!--    <div align="center"><label><button class="next-product">ต่อไป</button></label></div>-->
+  </div>
+  <div id="tabs-4">
+<table width="100%" border="0" cellspacing="2" cellpadding="5">
+  <tr>
+    <td colspan="3"  valign="top" class="menu_left"><strong>ข้อมูลจากแฟ้มประวัติของอาสาสมัคร</strong></td>
+    <td width="37%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="2"  valign="top" class="menu_right">&nbsp;</td>
+    <td colspan="3"  valign="top"  class="label_h">คำถามข้อ 18-22 เจ้าหน้าที่เก็บข้อมูลหาข้อมูลประกอบจากแฟ้มประวัติของอาสาสมัคร</td>
+    </tr>
+  <tr>
+    <td colspan="3" class="label_h">18. การทำแท้งครั้งนี้ใครเป็นผู้ทำแท้งให้ และทำด้วยวิธีการใด (ตอบได้เพียง 1 ข้อ)</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -4454,191 +4637,8 @@ function check_submit()
       <input type="checkbox" disabled="disabled"  name="abortion18_511" value="1" id="abortion18_510"  onkeypress="return handleEnter(this, event)" />
       11. ไม่ทราบ</label></td>
     </tr>
-    
-  
-   <!-- 
   <tr>
-    <td>&nbsp;</td>
-    <td colspan="2" class="label_h">18. อาชีพของผู้ทำแท้งในครั้งนี้ </td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>
-      <label>
-        <input type="radio" name="abortion_personal" value="1" id="abortion_personal_0" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
-        1. แพทย์</label>
-      </td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="radio" name="abortion_personal" value="2" id="abortion_personal_1" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
-        2. พยาบาล</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="radio" name="abortion_personal" value="3" id="abortion_personal_2" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
-        3. ผู้ช่วยพยาบาล/ เจ้าหน้าที่สาธารณสุข</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">      <label>
-      <input type="radio" name="abortion_personal" value="4" id="abortion_personal_3" onclick="other_name('text_abortion_personal','other')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
-      4. ไม่ใช่บุคลากรทางการแพทย์ ระบุ 
-      <input name="text_abortion_personal" type="text" class="validate[condRequired[abortion_personal_3]]" id="text_abortion_personal" size="30" maxlength="100"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
-    </label></td>
-    </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="radio" name="abortion_personal" value="5" id="abortion_personal_4" onclick="other_name('text_abortion_personal','')"  onkeypress="return handleEnter(this, event)" disabled="disabled" />
-        5. ไม่ทราบ</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  
-  
-  <tr>
-    <td>&nbsp;</td>
-    <td colspan="2" class="label_h">19. วิธีการทำแท้ง (ตอบได้มากกว่า 1 ข้อ)</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>
-      <label>
-        <input type="checkbox" disabled="disabled"  name="abortion_method1" value="1" id="abortion_method_0"  onkeypress="return handleEnter(this, event)" />
-        1. ใช้เครื่องสุญญากาศดูดออกทางช่องคลอด</label>
-    </td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="checkbox" disabled="disabled"  name="abortion_method2" value="1" id="abortion_method_1"  onkeypress="return handleEnter(this, event)" />
-        2. ใช้เครื่องมือขูดออกทางช่องคลอด</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="checkbox" disabled="disabled"  name="abortion_method3" value="1" id="abortion_method_2"  onkeypress="return handleEnter(this, event)" />
-        3. รับประทานยาเม็ด</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="checkbox" disabled="disabled"  name="abortion_method4" value="1" id="abortion_method_3"  onkeypress="return handleEnter(this, event)" />
-        4. เหน็บยาเข้าทางช่องคลอด</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">      <label>
-      <input type="checkbox" disabled="disabled"  name="abortion_method5" value="1" id="abortion_method_4"  onkeypress="return handleEnter(this, event)" />
-      5. ใส่สายยางและ/หรือฉีดสารใด ๆ เข้าทางช่องคลอด </label></td>
-    </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">      <label>
-      <input type="checkbox" disabled="disabled"  name="abortion_method6" value="1" id="abortion_method_5"  onkeypress="return handleEnter(this, event)" />
-      6. ใช้อุปกรณ์ของแข็งสอดและ/หรือ กระทุ้งเข้าทางช่องคลอด</label></td>
-    </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="checkbox" disabled="disabled"  name="abortion_method7" value="1" id="abortion_method_6"  onkeypress="return handleEnter(this, event)" />
-        7. บีบ นวด เค้นบริเวณหน้าท้อง</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">      <label>
-      <input type="checkbox" disabled="disabled"  name="abortion_method8" value="1" id="abortion_method_7" onclick="other_name4('abortion_method_7','text_abortion_method1')" onkeypress="return handleEnter(this, event)" />
-      8. จงใจให้เกิดอุบัติเหตุโดยวิธีใดวิธีหนึ่ง ระบุ 
-      <input name="text_abortion_method1" type="text" disabled="disabled" class="validate[condRequired[abortion_method_7]]" id="text_abortion_method1" size="30" maxlength="100" onkeypress="return handleEnter(this, event)" />
-    </label></td>
-    </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">      <label>
-      <input type="checkbox" disabled="disabled"  name="abortion_method9" value="1" id="abortion_method_8" onclick="other_name4('abortion_method_8','text_abortion_method2')" onkeypress="return handleEnter(this, event)" />
-      9. อื่นๆ ระบุ 
-      <input name="text_abortion_method2" type="text" disabled="disabled" class="validate[condRequired[abortion_method_8]]" id="text_abortion_method2" size="30" maxlength="100" onkeypress="return handleEnter(this, event)" />
-    </label></td>
-    </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>      <label>
-        <input type="checkbox" disabled="disabled"  name="abortion_method10" value="1" id="abortion_method_9"  onkeypress="return handleEnter(this, event)" onclick="other_name14()"/>
-        10. ไม่ทราบ</label></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2"><label>
-      <input type="checkbox" disabled="disabled"  name="abortion_method11" value="1" id="abortion_method_10" onclick="other_name7()" onkeypress="return handleEnter(this, event)"  />
-      11. โรงพยาบาลที่เข้าร่วมโครงการยุติการตั้งครรภ์ด้วยยาในระบบบริการสุขภาพ</label></td>
-    </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
-          <input type="radio" name="select_abortion_method" value="1" id="select_abortion_method_0" disabled="disabled" />
-          1. มิฟิพริสโตน</label>
-      </td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
-          <input type="radio" name="select_abortion_method" value="2" id="select_abortion_method_1" disabled="disabled" />
-          2. ไมโซพรอสตอล</label></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
-          <input type="radio" name="select_abortion_method" value="3" id="select_abortion_method_2" disabled="disabled" />
-          3. มิฟิพริสโตน และไมโซพรอสตอล</label></td>
-  </tr>
-  -->
-  
-</table>
-<!--    <div align="center"><label><button class="next-product">ต่อไป</button></label></div>-->
-  </div>
-  <div id="tabs-4">
-<table width="100%" border="0" cellspacing="2" cellpadding="5">
-  <tr>
-    <td colspan="3"  valign="top" class="menu_left"><strong>ข้อมูลจากแฟ้มประวัติของอาสาสมัคร</strong></td>
-    <td width="37%">&nbsp;</td>
-  </tr>
-  <tr>
-    <td rowspan="2"  valign="top" class="menu_right">&nbsp;</td>
-    <td colspan="3"  valign="top"  class="label_h">คำถามข้อ 19-22 เจ้าหน้าที่เก็บข้อมูลหาข้อมูลประกอบจากแฟ้มประวัติของอาสาสมัคร</td>
-    </tr>
-  <tr>
+	<td valign="top" class="menu_right">&nbsp;</td>
     <td colspan="3"  valign="top"  class="label_h">19. อายุครรภ์ครั้งนี้
         <input name="ga2" type="text" id="ga2" size="2" maxlength="2"  onkeypress="return handleEnter(this, event)"  onblur="check_large('1','42','ga2');" />
     
