@@ -24,8 +24,9 @@
 <title>การเฝ้าระวังการแท้งประเทศไทย</title>
   	<link rel="stylesheet" href="css/style_site.css">
  
-     <script src="js/jquery-1.9.1.js"></script>
-  	<script src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+  	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
 <style>
 
@@ -36,6 +37,14 @@
 	text-decoration: none; 	*/ 
 
 	
+}
+#loader {
+	text-align: center;
+	display: none;
+}
+#loader_show {
+	text-align: center;
+	display: none;
 }
 .select_menu:hover { 
 color: #FFF;
@@ -76,16 +85,20 @@ filter:alpha(opacity=60);
 					return false;		
 				}
 		}
-		
+var is_loading = false;	
 function data_show_seacrh(){
-	$.post("search_show.php", { data: $("#search_text").val(), data2 : $("#survey_province").val(), data3 : $("#l_month").val(), data4 : $("#l_year").val()}, 
-		function(data,data2,data3,data4){
-
-			$("#show_text_2").html(data,data2);
-			document.getElementById("show_text_1").disabled='true';
-			
-		}
-	);
+	if (is_loading == false) {
+		is_loading = true;
+		$('#loader_show').show();
+		$.post("search_show.php", { data: $("#search_text").val(), data2 : $("#survey_province").val(), data3 : $("#l_month").val(), data4 : $("#l_year").val()}, 
+			function(data,data2,data3,data4){
+				$("#show_text_2").html(data,data2);
+				$('#loader_show').hide();
+				is_loading = false;
+			}
+		);
+	}
+	
 }
 	</script>
 
@@ -174,6 +187,7 @@ function data_show_seacrh(){
         <td width="32%" class="menu_right"></td>
       </tr>
     </table>
+	<p id="loader_show" align="center"><img src="image/ajax-loader.gif"></p>
 </form>
 
 

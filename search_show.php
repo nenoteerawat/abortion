@@ -118,7 +118,7 @@
     <td class="menu_right"><font color="#337ECC"><b>จำนวนรวม : <?php echo $count_show[0]." รายการ";?></b></font></td>
   </tr>
 </table>
-<table width="100%" border="0" cellspacing="2" cellpadding="3">
+<table width="100%" border="0" cellspacing="2" cellpadding="3" id="search_show_tb">
   <tr bgcolor="#3399CC" class="color_text">
     <td width="4%">ลำดับ</td>
     <td width="15%">เลขแบบสอบถาม</td>
@@ -165,18 +165,21 @@ if(empty($sql_text1) && empty($sql_text2))
 	}
 */
 	
-	
+	$limit = 1000;
 	if($_SESSION["ss_lavel"] == 1)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 ".$text_sql." order by survey_id";
+			$sql_show = "select * from abortionsurvey_main_2559 ".$text_sql." order by survey_id LIMIT 0, $limit";
+			$sql = "select * from abortionsurvey_main_2559 ".$text_sql;
 		}
 	if($_SESSION["ss_lavel"] == 2)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." order by survey_id";
+			$sql_show = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." order by survey_id LIMIT 0, $limit";
+			$sql = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 		}
 	if($_SESSION["ss_lavel"] == 3)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2."  order by survey_id";
+			$sql_show = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2."  order by survey_id LIMIT 0, $limit";
+			$sql = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 		}
 	if($_SESSION["ss_lavel"] == 4)
 		{	
@@ -201,15 +204,17 @@ if(empty($sql_text1) && empty($sql_text2))
 						$sql_text_sum = "survey_province like  '%".$text2."%'";
 					}
 							
-			$sql_show = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2." order by survey_id";
+			$sql_show = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2." order by survey_id LIMIT 0, $limit";
+			$sql = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2;
 		}
 	$count_bg = 0;
 	$count_row = 1;
 	//echo "show-> ".$sql_show."<br>";
+	$last_id = 0;
 	$result_show = mysql_query($sql_show);
 	while($show = mysql_fetch_array($result_show))
 		{	
-			
+			$last_id = $show['id'];
 			if($count_bg != 0)
 				{
 					$bg = "#ffffff";
@@ -242,6 +247,12 @@ if(empty($sql_text1) && empty($sql_text2))
 <?php
 	$count_row++;
 		}
-		
+	echo '<script>';
+	echo 'var last_id = '.$last_id.';';
+	echo 'var sql = "'.$sql.'";';
+	echo 'var count_row = '.$count_row.';';
+	echo 'var count_bg = '.$count_bg.';';
+	echo '</script>';
 ?>
 </table>
+<p id="loader" align="center"><img src="image/ajax-loader.gif"></p>
