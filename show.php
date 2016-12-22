@@ -89,6 +89,7 @@ var is_loading = false;
 function data_show_seacrh(){
 	if (is_loading == false) {
 		is_loading = true;
+		$("#show_text_2").html('');
 		$('#loader_show').show();
 		$.post("search_show.php", { data: $("#search_text").val(), data2 : $("#survey_province").val(), data3 : $("#l_month").val(), data4 : $("#l_year").val()}, 
 			function(data,data2,data3,data4){
@@ -187,12 +188,12 @@ function data_show_seacrh(){
         <td width="32%" class="menu_right"></td>
       </tr>
     </table>
-	<p id="loader_show" align="center"><img src="image/ajax-loader.gif"></p>
 </form>
 
 
 <div id="show_text_2">
 </div>
+<p id="loader_show" align="center"><img src="image/ajax-loader.gif"></p>
 </div>
 
 

@@ -168,17 +168,17 @@ if(empty($sql_text1) && empty($sql_text2))
 	$limit = 1000;
 	if($_SESSION["ss_lavel"] == 1)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 ".$text_sql." order by survey_id LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 ".$text_sql." LIMIT 0, $limit";
 			$sql = "select * from abortionsurvey_main_2559 ".$text_sql;
 		}
 	if($_SESSION["ss_lavel"] == 2)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." order by survey_id LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." LIMIT 0, $limit";
 			$sql = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 		}
 	if($_SESSION["ss_lavel"] == 3)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2."  order by survey_id LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." LIMIT 0, $limit";
 			$sql = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 		}
 	if($_SESSION["ss_lavel"] == 4)
@@ -204,7 +204,7 @@ if(empty($sql_text1) && empty($sql_text2))
 						$sql_text_sum = "survey_province like  '%".$text2."%'";
 					}
 							
-			$sql_show = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2." order by survey_id LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2." LIMIT 0, $limit";
 			$sql = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2;
 		}
 	$count_bg = 0;
@@ -253,6 +253,7 @@ if(empty($sql_text1) && empty($sql_text2))
 	echo 'var count_row = '.$count_row.';';
 	echo 'var count_bg = '.$count_bg.';';
 	echo '</script>';
+	sleep(1);
 ?>
 </table>
 <p id="loader" align="center"><img src="image/ajax-loader.gif"></p>

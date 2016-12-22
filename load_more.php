@@ -72,7 +72,7 @@ else{
 echo $data;
 
 // sleep for 1 second to see loader, it must be deleted in prodection
-//sleep(1);
+sleep(1);
 ?>
 
 
