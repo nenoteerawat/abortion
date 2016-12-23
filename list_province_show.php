@@ -28,7 +28,7 @@
 	
 	
 ?>
-	<select name="survey_province" id="survey_province" onchange="data_show_seacrh()" >
+	<select name="survey_province" id="survey_province" onkeypress="return searchWithEnter(event)">
 
 		<option value="">----- เลือก -----</option>
 		

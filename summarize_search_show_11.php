@@ -357,4 +357,5 @@
     <td align="center"><?php echo toNumber($result_all_family_12['count'])?></td>
 	<td align="center"><?php echo $result_all_family['count'] > 0 ? toDecimal($result_all_family_12['count']/$result_all_family['count']*100) : '-'?></td>
   </tr>
+  <?php sleep(1);?>
 </table>

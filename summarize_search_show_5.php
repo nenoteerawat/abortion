@@ -301,3 +301,4 @@
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_job_10['count']/$result_done['count']*100) : '-'?></td>
   </tr>
 </table>
+<?php sleep(1);?>

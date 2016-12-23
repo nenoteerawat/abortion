@@ -166,4 +166,5 @@
 	<td align="center"><?php echo toNumber($result_done_no_info['count'])?></td>
 	<td align="center"><?php echo $result_done['count'] > 0 ? toDecimal($result_done_no_info['count']/$result_done['count']*100) : '-'?></td>
   </tr>
+  <?php sleep(1);?>
 </table>

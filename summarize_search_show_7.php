@@ -219,3 +219,4 @@
 	<td align="center"><?php echo $result_done_inattentive['count'] > 0 ? toDecimal($result_done_inattentive_no_info['count']/$result_done_inattentive['count']*100) : '-'?></td>
   </tr>
 </table>
+<?php sleep(1);?>
