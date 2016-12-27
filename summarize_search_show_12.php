@@ -173,3 +173,4 @@
 	<td align="center"><?php echo $result_all['count'] > 0 ? toDecimal($result_all_effect_11['count']/$result_all['count']*100) : '-'?></td>
   </tr>
 </table>
+<?php sleep(1);?>

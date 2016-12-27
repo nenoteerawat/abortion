@@ -23,7 +23,7 @@
 	$sql_text_level2 = "";
 	if(!empty($text1))
 		{
-			$sql_text1 = " and survey_agency like '%".$text1."%' or survey_id like '%".$text1."%'";
+			$sql_text1 = " and (survey_agency like '%".$text1."%' or survey_id like '%".$text1."%')";
 			$sql_text_level2 = " and  survey_id like '%".$text1."%' ";
 		}
 	if(!empty($text2))
@@ -69,15 +69,15 @@
 		
 		if($_SESSION["ss_lavel"] == 1)
 			{
-				$sql_count_show = "select count(*) from abortionsurvey_main_2559 ".$text_sql." order by survey_id";
+				$sql_count_show = "select count(*) from abortionsurvey_main_2559 ".$text_sql;
 			}
 		if($_SESSION["ss_lavel"] == 2)
 			{
-				$sql_count_show = "select count(*) from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." order by survey_id";
+				$sql_count_show = "select count(*) from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 			}
 		if($_SESSION["ss_lavel"] == 3)
 			{
-				$sql_count_show = "select count(*) from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2."  order by survey_id";
+				$sql_count_show = "select count(*) from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 			}
 		if($_SESSION["ss_lavel"] == 4)
 			{	
@@ -103,10 +103,11 @@
 							$sql_text_sum = "survey_province like  '%".$text2."%'";
 						}
 								
-				$sql_count_show = "select count(*) from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2." order by survey_id";
+				$sql_count_show = "select count(*) from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2;
 			}	
 			
 	//echo "count-> ".$sql_count_show."<br>";
+	$sql_count_show = $sql_count_show."order by id";
 	$result_count_show = mysql_query($sql_count_show);
 	$count_show = mysql_fetch_array($result_count_show);
 	
@@ -140,7 +141,7 @@
 $sql_text2 = "";
 if(!empty($text1))
 	{
-		$sql_text1 = "survey_agency like '%".$text1."%' or survey_id like '%".$text1."%'";
+		$sql_text1 = "(survey_agency like '%".$text1."%' or survey_id like '%".$text1."%')";
 		$sql_text_level2 = "and  survey_id like '%".$text1."%'";
 	}
 if(!empty($text2))
@@ -168,17 +169,17 @@ if(empty($sql_text1) && empty($sql_text2))
 	$limit = 1000;
 	if($_SESSION["ss_lavel"] == 1)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 ".$text_sql." LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 ".$text_sql;
 			$sql = "select * from abortionsurvey_main_2559 ".$text_sql;
 		}
 	if($_SESSION["ss_lavel"] == 2)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 			$sql = "select * from abortionsurvey_main_2559 where survey_id like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 		}
 	if($_SESSION["ss_lavel"] == 3)
 		{
-			$sql_show = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2." LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 			$sql = "select * from abortionsurvey_main_2559 where survey_province like '%".$_SESSION["ss_hospital_id"]."%' ".$sql_text_level2;
 		}
 	if($_SESSION["ss_lavel"] == 4)
@@ -204,13 +205,14 @@ if(empty($sql_text1) && empty($sql_text2))
 						$sql_text_sum = "survey_province like  '%".$text2."%'";
 					}
 							
-			$sql_show = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2." LIMIT 0, $limit";
+			$sql_show = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2;
 			$sql = "select * from abortionsurvey_main_2559 where (".$sql_text_sum.")  ".$sql_text_level2;
 		}
 	$count_bg = 0;
 	$count_row = 1;
 	//echo "show-> ".$sql_show."<br>";
 	$last_id = 0;
+	$sql_show = $sql_show." order by id LIMIT 0, ".$limit;
 	$result_show = mysql_query($sql_show);
 	while($show = mysql_fetch_array($result_show))
 		{	

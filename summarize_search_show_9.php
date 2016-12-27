@@ -411,3 +411,4 @@
 	<td align="center"><?php echo $result_done_complication_ever['count'] > 0 ? toDecimal($result_done_complication_ever_13['count']/$result_done_complication_ever['count']*100) : '-'?></td>
   </tr>
 </table>
+<?php sleep(1);?>

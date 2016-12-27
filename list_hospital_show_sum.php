@@ -7,7 +7,7 @@
 	
 	
 ?>
-	<select name="survey_hospital" id="survey_hospital" onchange="data_show_seacrh()" >
+	<select name="survey_hospital" id="survey_hospital" onkeypress="return processWithEnter(event)" >
 
 		<option value="">----- เลือก -----</option>
 		

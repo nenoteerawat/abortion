@@ -15,10 +15,10 @@ if (isset($_POST['last_id'])) {
 if (isset($_POST['limit'])) {
 	$limit = intval($_POST['limit']);
 }
-$sql = "select * from abortionsurvey_main_2559 where id > ".$last_id." LIMIT 0, ".$limit;
+$sql = "select * from abortionsurvey_main_2559 where id > ".$last_id;
 if (isset($_POST['sql'])) {
 	$sql = $_POST['sql'];
-	$sql = $sql." and id > ".$last_id." LIMIT 0, ".$limit;
+	$sql = $sql." and id > ".$last_id;
 	if(!strpos($sql, "where")){
 		$sql = preg_replace("/and/","where",$sql,1);
 	}
@@ -30,6 +30,7 @@ if (isset($_POST['count_bg'])) {
 	$count_bg = intval($_POST['count_bg']);
 }
 // select items for page params
+$sql = $sql." order by id LIMIT 0, ".$limit;
 $result = mysql_query($sql);
 $last_id = 0;
 while($rs = mysql_fetch_array($result)){
