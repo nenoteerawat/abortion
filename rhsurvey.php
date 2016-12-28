@@ -37,11 +37,29 @@ a{
     color: white;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.mini_block_rhsurvey{
+    margin: 60px auto 30px;
+    padding: 15px;
+    position: relative;
+    background: #fffaf6;
+    border-radius: 4px;
+    color: #7e7975;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 1px 5px rgba(0,0,0,0.2), 0 0 0 12px rgba(255,255,255,0.4);
+}
+.large_block_rhsurvey{
+    margin: 10px auto 30px;
+    padding: 15px;
+    position: relative;
+    background: #d1f3d4;
+    border-radius: 4px;
+    color: #7e7975;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 1px 5px rgba(0,0,0,0.2), 0 0 0 12px rgba(255,255,255,0.4);
+}
 </style>
 <form id="form1" name="form1" method="post" action="">
-<div  style="width:902px; padding-bottom: 50px;" class="broder_set">
+<div  style="width:902px; padding-bottom: 50px;" class="large_block_rhsurvey">
 <div align="center"><img src="image/h_rh_survey.png" width="900" height="140" /></div><br />
-<div class="broder_set" align="center" style="width:800px;" >
+<div class="mini_block_rhsurvey" align="center" style="width:800px;" >
 
 <table width="800px" border="0" align="center" cellpadding="2" cellspacing="2">
   <tr>

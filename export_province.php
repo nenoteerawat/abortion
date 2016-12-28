@@ -124,7 +124,7 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 
 		
 ?>
-<div class="broder_set" style="width:908px">
+<div class="large_block" style="width:908px">
 <div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">
@@ -135,7 +135,7 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
     <li><a href="#tabs-1">ดาวน์โหลดข้อมูลรายปี</a></li>
   </ul>
   <div id="tabs-1">
-<div class="broder_set" align="center" style="width:804px" >
+<div class="m" align="center" style="width:804px" >
 <table width="100%" border="0" cellspacing="2" cellpadding="10" class="summarize">
   <tr bgcolor="#3399CC">
     <td width="50%" height="56"><h3><font color="#FFFFFF"><center>ข้อมูลรายปี</center></font></h3></td>

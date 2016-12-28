@@ -1254,7 +1254,7 @@ function check_submit()
 
 <body>
 <form id="form1" name="form1" method="post" action="" onsubmit="return check_submit()" >
-<div class="broder_set" style="width:908px">
+<div class="large_block" style="width:908px">
 <div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">

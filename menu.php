@@ -45,7 +45,7 @@
 
 .menu a {
   
-    color: #808080;
+    color: rgb(0, 0, 0);
     display: block;
     font-size: 23px;
     line-height: 54px;

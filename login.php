@@ -73,23 +73,23 @@ if(!empty($_POST['h_submit']))
 <META NAME="AUTHOR" CONTENT="sinpong kaewsom">
 <META NAME="KEYWORDS" CONTENT="ศิลป์พงษ์ แก้วสม sinpong kaewsom">
 <title>การเฝ้าระวังการแท้งประเทศไทย</title>
-
+	<script src="js/modernizr.custom.63321.js"></script>
   	<link rel="stylesheet" href="css/style_site.css">
-
+	<link rel="stylesheet" href="css/font-awesome.css">
 </head>
 
 <body>
 
 <form id="form1" name="form1" method="post" action="">
-<div  style="width:902px" class="broder_set">
+<div  style="width:902px" class="large_block">
 <div align="center"><img src="image/h.png" width="900" height="140" /></div><br />
-<div class="broder_set" align="center" style="width:500px" >
+<div class="mini_block" align="center" style="width:500px" >
 
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="2">
   <tr>
-    <td width="40%"><h3>ลงชื่อเข้าใช้งานระบบ</h3></td>
+    <td width="40%"><h2>ลงชื่อเข้าใช้งานระบบ</h2></td>
     <td width="60%"><?php 
-if(!empty($h_submit))
+if(isset($_POST['h_submit']))
 	{
 				if ($_SESSION["ss_usr"] == $_SESSION["ss_usr1"])
 					{
@@ -108,21 +108,25 @@ if(!empty($h_submit))
 		  ?></td>
   </tr>
   <tr>
-    <td class="menu_right"><h4>ชื่อผู้ใช้ : </h4></td>
+    <td class="menu_right"><i class="fa fa-user" style="font-size: 30px;" ></i></td>
     <td><label>
-      <input type="text" name="username" id="username" />
+      <input class="input_login" type="text" name="username" id="username" placeholder="ชื่อผู้ใช้" />
       <font color="#FF0000">*</font></label></td>
   </tr>
   <tr>
-    <td class="menu_right"><h4>รหัสผ่าน : </h4></td>
+    <td class="menu_right"><i class="fa fa-key" style="font-size: 30px;" ></i></i></td>
     <td><label>
-      <input type="password" name="password" id="password" />
+      <input class="input_login" type="password" name="password" id="password" placeholder="รหัสผ่าน" />
       <font color="#FF0000">*</font></label></td>
   </tr>
   <tr>
-    <td colspan="2"><div align="center">
+	<td></td>
+    <td><div>
       <label>
-      <input type="submit" name="button" id="button" value="เข้าสู่ระบบ" />
+      <button class="bt_sumit_login" type="submit" name="button" id="button" >
+	  <i class="fa fa-paper-plane"></i>
+	  <span>เข้าสู่ระบบ</span>
+	  </button>
     </label>
       <input name="h_submit" type="hidden" id="h_submit" value="1" />
     </div></td>
@@ -135,5 +139,12 @@ if(!empty($h_submit))
 
 </div>
 </form>
+<script src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('input, textarea').placeholder();
+});
+</script>
 </body>
 </html>

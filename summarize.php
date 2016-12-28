@@ -112,7 +112,7 @@ background-color:#339; /* โค๊ดสีพื้นหลัง */
 
 		
 ?>
-<div class="broder_set" style="width:908px">
+<div class="large_block" style="width:908px">
 <div align="center"><img src="image/h.png" width="900" height="140" /></div>
 <div><?php include("menu.php"); ?></div>
 <div align="right">
