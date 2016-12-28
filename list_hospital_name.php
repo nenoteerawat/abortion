@@ -18,7 +18,7 @@ while($hospital_name = mysql_fetch_array($result))
 ?>
 		<option value="<?php echo $hospital_name['hospital_name']?>" 
 		<?php
-			if(!empty($_POST['hospital'])){
+			if(isset($_POST['hospital'])){
 				$selected_hos = $_POST['hospital'];
 				if($hospital_name['hospital_name'] == $selected_hos){
 					?>selected = "true"<?php

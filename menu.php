@@ -3,10 +3,9 @@
 /*    margin: 0 auto;
     padding: 0;*/
 @font-face {
-  font-family: supermarket;
-  src: url(./font/supermarket.ttf) format("truetype");
+  font-family: MS Sans Serif;
 }
-*{ font-family: supermarket, sans-serif}
+*{ font-family: MS Sans Serif}
 }
 .container {
     margin: 0 auto;
@@ -48,7 +47,7 @@
   
     color: #808080;
     display: block;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 54px;
     padding: 0 20px;
     text-decoration: none;

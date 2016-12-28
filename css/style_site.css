@@ -1,10 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 @font-face {
-  font-family: supermarket;
-  src: url(../font/supermarket.ttf) format("truetype");
+  font-family: MS Sans Serif;
 }
-*{ font-family: supermarket, sans-serif}
+*{ font-family: MS Sans Serif}
 body
 	{
 		/*font-family:Arial, Helvetica, sans-serif;*/

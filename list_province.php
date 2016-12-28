@@ -21,9 +21,13 @@ while($hospital_province = mysql_fetch_array($result))
 				if($hospital_province['hospital_province'] == $data_hospital['survey_province']){
 					?>selected = "true"<?php
 				}
+			}else if(isset($_SESSION["catch_provice"])){
+				if($hospital_province['hospital_province'] == $_SESSION["catch_provice"]){
+					?>selected = "true"<?php
+				}
 			}
 		?>
-		><?php echo $hospital_province['hospital_province']?></option>		
+		><?php echo $hospital_province['hospital_province']?></option>
 <?php
 		}
 

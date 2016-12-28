@@ -26,12 +26,16 @@ if(!empty($_POST['h_submit']))
 	{
 		
 		$hospital_id = $_POST['hospital_id'];
+		$_SESSION["catch_hospital_id"] = $hospital_id;
 		$file_id = $_POST['file_id'];
 		for($i = strlen($file_id); $i < 4; $i++)
 			$file_id = "0".$file_id ;
 		$survey_agency = $_POST['survey_agency'];
+		$_SESSION["catch_hospital_name"] = $survey_agency;
 		$survey_district = $_POST['survey_district'];
+		$_SESSION["catch_district"] = $survey_district;
 		$survey_province = $_POST['survey_province'];
+		$_SESSION["catch_provice"] = $survey_province;
 		$survey_name = $_POST['survey_name'];
 		$survey_position = $_POST['survey_position'];
 		$survey_datefirst = $_POST['survey_datefirst'];
@@ -687,6 +691,13 @@ function check_id(year){
 //--------------------- Select --------------------------
 function select_hospitol(){
 	$.post("list_hospital_name.php", { data: $("#survey_province").val()}, 
+		function(data){
+			$("#show_hospitol").html(data);
+		}
+	);
+}
+function select_hospitol_sesseion(){
+	$.post("list_hospital_name.php", { data: $("#survey_province").val()<?php echo isset($_SESSION["catch_hospital_name"])?", hospital:'".$_SESSION["catch_hospital_name"]."'":"";?>}, 
 		function(data){
 			$("#show_hospitol").html(data);
 		}
@@ -2340,7 +2351,7 @@ function check_submit()
 
 </head>
 
-<body>
+<body onload="select_hospitol_sesseion()">
 <form id="form1" name="form1" method="post" action="" onsubmit="return check_submit()" >
 <?php
 		$sql_member = "select * from abortionsurvey_member where member_id= '".$_SESSION["ss_id"]."'";
@@ -2432,17 +2443,21 @@ function check_submit()
         <td colspan="3"><?php if($_SESSION["ss_lavel"] != 1){ ?><label>
           <input name="survey_district" type="text" id="survey_district" onkeypress="return handleEnter(this, event)" value="<?php echo $data_hospital['hospital_district']; ?>" size="20" maxlength="50" readonly="readonly" />
         </label>
-        <?php } else { echo  "
+        <?php } else { 
+		$dist_temp = isset($_SESSION["catch_district"])?"value='".$_SESSION["catch_district"]."'":"";
+		echo  "
 		<label>
-          <input type='text' name='survey_district' id='show_hospitol_district'  readonly='readonly'   />
+          <input type='text' name='survey_district' id='show_hospitol_district' readonly='readonly' ".$dist_temp." />
         </label>"; } ?> <font color="#FF0000">*</font></td>
       </tr>
       <tr>
         <td width="36%" class="menu_right">รหัสโรงพยาบาล : </td>
         <td colspan="3"><?php if($_SESSION["ss_lavel"]!= 1){ ?><label>
           <input name="hospital_id" type="text"  id="hospital_id" value="<?php echo $data_hospital['oldhospital_id']; ?>" size="15" maxlength="15" readonly="readonly" onkeypress="return handleEnter(this, event)" /></label> 
-          <?php } else {  echo "       <label>
-          <input type='text' name='hospital_id' id='show_hospitol_id' readonly='readonly'  />
+          <?php } else {  
+		  $hospital_id_temp = isset($_SESSION["catch_hospital_id"])?"value='".$_SESSION["catch_hospital_id"]."'":"";
+		  echo "       <label>
+          <input type='text' name='hospital_id' id='show_hospitol_id' readonly='readonly' ".$hospital_id_temp." />
         </label>"		  
 		  ; } ?>
           <font color="#FF0000">*</font> <span class="menu_right"><!--แบบสอบถามหมายเลข : </span>
