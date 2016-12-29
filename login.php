@@ -87,8 +87,8 @@ if(!empty($_POST['h_submit']))
 
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="2">
   <tr>
-    <td width="40%"><h2>ลงชื่อเข้าใช้งานระบบ</h2></td>
-    <td width="60%"><?php 
+    <td width="50%"><h2>ลงชื่อเข้าใช้งานระบบ</h2></td>
+    <td width="50%"><?php 
 if(isset($_POST['h_submit']))
 	{
 				if ($_SESSION["ss_usr"] == $_SESSION["ss_usr1"])
